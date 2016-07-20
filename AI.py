@@ -21,12 +21,16 @@ if filecheck == 1:
 			file.write("%s" %command)
 		#If there is a question mark and "What" in command, then it must be a question so search Commands.dat for it.
 		elif "?" and "What" in command:
+			#Change command to find it later
 			command=command.split("is", 1)[1]
 			command=command.split("?", 1)[0]
+			#Search for the answer in Commands.dat
 			for line in file.splitlines():
+				#If the command is in the line, then save it
     				if command in line:
     					answer=line
     					break
+    			#Save and show the answer.
     			answer=answer.split("is", 1)[1]
     			answer1="Your %s is %s" %(command, answer)
 else:
