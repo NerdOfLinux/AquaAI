@@ -21,4 +21,5 @@ else:
 		file.write("\n")
 	with open('%s.pl' %username, 'w') as file:
 		file.write("favoritecolor(%s)." %color)
+		file.write("\n")
 		file.write("birthday(%s)." %birthday)
