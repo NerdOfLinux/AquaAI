@@ -21,7 +21,12 @@ if filecheck == 1:
 			file.write("%s" %command)
 		#If there is a question mark and "What" in command, then it must be a question so search Commands.dat for it.
 		elif "?" and "What" in command:
-			print()	
+			command=command.split("is", 1)[1]
+			command=command.split("?", 1)[0]
+			for line in data.splitlines():
+    				if command in line:
+    					line1=line
+    					break
 else:
 	print("Welcome to the AquaAI setup.")
 	print("No spaces or special characters allowed.")
