@@ -14,11 +14,11 @@ if filecheck == 1:
 		print("Welcome %s, how may I help you?" %username)
 		#Ask for a command
 		command=raw_input("Enter Command: ")
-	if "." in command:
-		with open('Commands.dat', 'a') as file:
+		file=open('Commands.dat', 'a')
+		if "." in command:
 			file.write("%s" %command)
-	elif "?" in command:
-		
+		elif "?" and "What" in command:
+			print()	
 else:
 	print("Welcome to the AquaAI setup.")
 	print("No spaces or special characters allowed.")
