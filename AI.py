@@ -4,9 +4,10 @@ import os
 filecheck=os.path.isfile("AI.dat")
 if filecheck == 1:
 	file=open('AI.dat', 'r')
+		contents=file.read()
 	print(file)
 	username=raw_input("What is your username?: ")
-	if username in file and os.path.isfile("%s.pl" %username):
+	if username in contents and os.path.isfile("%s.pl" %username):
 		print("Welcome %s, how may I help you?" %username)
 		command=raw_input("Enter Command: ")
 else:
