@@ -10,10 +10,8 @@ if filecheck == 1:
 		command=raw_input("Enter Command: ")
 else:
 	print("Welcome to the AquaAI setup.")
+	print("No spaces or special characters allowed.")
 	username=raw_input("What is your name?: ")
-	while " " or "-" in username:
-		print("No spaces or special characters allowed!!!")
-		username=raw_input("What is your name?: ")
 	print("Hello, %s, please answer a few questions about yourself:" %username)
 	color=raw_input("What is your favorite color?: ")
 	birthday=raw_input("When is your birthday (month/day in numbers)?: ")
