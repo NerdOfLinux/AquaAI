@@ -23,10 +23,12 @@ if filecheck == 1:
 		elif "?" and "What" in command:
 			command=command.split("is", 1)[1]
 			command=command.split("?", 1)[0]
-			for line in data.splitlines():
+			for line in file.splitlines():
     				if command in line:
-    					line1=line
+    					answer=line
     					break
+    			answer=answer.split("is", 1)[1]
+    			answer1="Your %s is %s" %(command, answer)
 else:
 	print("Welcome to the AquaAI setup.")
 	print("No spaces or special characters allowed.")
