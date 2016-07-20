@@ -12,11 +12,13 @@ else:
 	print("Welcome to the AquaAI setup.")
 	print("No spaces or special characters allowed.")
 	username=raw_input("What is your name?: ")
+	username=username.lower()
 	print("Hello, %s, please answer a few questions about yourself:" %username)
 	color=raw_input("What is your favorite color?: ")
 	birthday=raw_input("When is your birthday (month/day in numbers)?: ")
 	with open('AI.dat', 'w') as file:
 		file.write("%s" %username)
+		file.write("\n")
 	with open('%s.pl', 'w' %username) as file:
 		file.write("favoritecolor(%s)." %color)
 		file.write("birthday(%s)." %birthday)
