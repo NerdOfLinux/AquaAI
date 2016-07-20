@@ -19,6 +19,6 @@ else:
 	with open('AI.dat', 'w') as file:
 		file.write("%s" %username)
 		file.write("\n")
-	with open('%s.pl', 'w' %username) as file:
+	with open('%s.pl' %username, 'w') as file:
 		file.write("favoritecolor(%s)." %color)
 		file.write("birthday(%s)." %birthday)
