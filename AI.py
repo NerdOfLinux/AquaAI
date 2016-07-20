@@ -1,6 +1,7 @@
 import sys
 import os
 #filecheck=os.path.isfile("AI.pl")
+filecheck=0
 if filecheck == 1:
 	file=open('AI.dat', 'r')
 	username=raw_input("What is your username?: ")
