@@ -14,9 +14,12 @@ if filecheck == 1:
 		print("Welcome %s, how may I help you?" %username)
 		#Ask for a command
 		command=raw_input("Enter Command: ")
+		#Open up commands.dat
 		file=open('Commands.dat', 'a')
+		#If there is a period, the sentance is probably a statement, so save it. 
 		if "." in command:
 			file.write("%s" %command)
+		#If there is a question mark and "What" in command, then it must be a question so search Commands.dat for it.
 		elif "?" and "What" in command:
 			print()	
 else:
