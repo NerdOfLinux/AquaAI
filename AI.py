@@ -14,25 +14,7 @@ if filecheck == 1:
 		print("Welcome %s, how may I help you?" %username)
 		#Ask for a command
 		command=raw_input("Enter Command: ")
-		#Open up commands.dat
-		file=open('Commands.dat', 'a')
-		#If there is a period, the sentance is probably a statement, so save it. 
-		if "." in command:
-			file.write("%s" %command)
-		#If there is a question mark and "What" in command, then it must be a question so search Commands.dat for it.
-		elif "?" and "What" in command:
-			#Change command to find it later
-			command=command.split("is", 1)[1]
-			command=command.split("?", 1)[0]
-			#Search for the answer in Commands.dat
-			for line in file.splitlines():
-				#If the command is in the line, then save it
-    				if command in line:
-    					answer=line
-    					break
-    			#Save and show the answer.
-    			answer=answer.split("is", 1)[1]
-    			answer1="Your %s is %s" %(command, answer)
+		
 else:
 	print("Welcome to the AquaAI setup.")
 	print("No spaces or special characters allowed.")
