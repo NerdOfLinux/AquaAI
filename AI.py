@@ -29,11 +29,9 @@ if filecheck == 1:
 				query=query.split("?", 1)[0]
 				#Search for answer in Commands.dat
 				for line in readfile:
-					print(line)
 					line=line.rstrip()
 					if query in line:
 						answer=line
-						print(answer)
 						exit
 				query=query.split("my", 1)[1]
 				answer=answer.split("is", 1) [1]
