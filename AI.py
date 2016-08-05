@@ -10,7 +10,7 @@ if filecheck == 1:
 		contents=file.read()
 	username=raw_input("What is your username?: ")
 	#If the user is in AI.dat and has their own file
-	if username in contents and os.path.isfile("%s.pl" %username):
+	if username.lower() in contents and os.path.isfile("%s.pl" %username):
 		#Open the commands file
 		file=open('Commands.dat', 'a')
 		#Begin a loop
@@ -21,6 +21,10 @@ if filecheck == 1:
 			#If the word my or i is in the command, save it to a file
 			if "my" or "i" in command.lower():
 				file.write(command.lower())
+				file.write("\n")
+			elif "?" in command:
+				query=command.lower()
+				query=
 				
 		
 else:
