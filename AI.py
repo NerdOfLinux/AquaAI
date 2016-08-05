@@ -32,9 +32,10 @@ if filecheck == 1:
 					line=line.rstrip()
 					if query in line:
 						answer=line
-				query=query.split("my", 1)[1]
-				answer=answer.split("is", 1) [1]
-				print("Your %s is: %s" %(query, answer))
+						query=query.split("my", 1)[1]
+						answer=answer.split("is", 1) [1]
+						print("Your %s is: %s" %(query, answer))
+						exit
 				
 		
 else:
