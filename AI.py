@@ -23,11 +23,12 @@ if filecheck == 1:
 				file.write(command.lower())
 				file.write("\n")
 			elif "?" in command:
+				readfile=open('Commands.dat', 'r')
 				query=command.lower()
 				query=query.split("is", 1)[1]
 				query=query.split("?", 1)[0]
 				#Search for answer in Commands.dat
-				for line in file:
+				for line in readfile:
 					line=line.rstrip()
 					if query in line:
 						answer=line
