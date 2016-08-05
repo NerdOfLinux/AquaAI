@@ -10,9 +10,9 @@ if filecheck == 1:
 		contents=file.read()
 	username=raw_input("What is your username?: ")
 	#If the user is in AI.dat and has their own file
-	if username.lower() in contents and os.path.isfile("%s.pl" %username):
+	if username.lower() in contents and os.path.isfile("%s.dat" %username):
 		#Open the commands file
-		file=open('Commands.dat', 'a')
+		file=open('%s.dat' %username, 'a')
 		#Begin a loop
 		while True:
 			print("Welcome %s, how may I help you?" %username)
@@ -23,7 +23,7 @@ if filecheck == 1:
 				file.write(command.lower())
 				file.write("\n")
 			elif "?" in command:
-				readfile=open('Commands.dat', 'r')
+				readfile=open('%s.dat' %username, 'r')
 				query=command.lower()
 				query=query.split("is ", 1)[1]
 				query=query.split("?", 1)[0]
@@ -55,9 +55,9 @@ else:
 		file.write("%s" %username)
 		file.write("\n")
 	#Write user information to a prolog file
-	with open('%s.pl' %username, 'w') as file:
-		file.write("favoritecolor(%s)." %color)
-		file.write("\n")
-		file.write("birthday(%s)." %birthday)
-	with open('Commands.dat', 'w') as file:
+	#with open('%s.pl' %username, 'w') as file:
+	#	file.write("favoritecolor(%s)." %color)
+	#	file.write("\n")
+	#	file.write("birthday(%s)." %birthday)
+	with open('%s.dat' %username, 'w') as file:
 		file.write("")
