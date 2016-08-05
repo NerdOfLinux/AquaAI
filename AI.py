@@ -24,7 +24,9 @@ if filecheck == 1:
 				file.write("\n")
 			elif "?" in command:
 				query=command.lower()
-				query=
+				query=query.split("is", 1)[1]
+				query=query.split("?", 1)[0]
+				print(query)
 				
 		
 else:
