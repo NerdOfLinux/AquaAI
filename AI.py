@@ -31,11 +31,11 @@ if filecheck == 1:
 				for line in readfile:
 					line=line.rstrip()
 					if query in line:
-						answer=line
-						query=query.split("my", 1)[1]
-						answer=answer.split("is", 1) [1]
-						print("Your %s is: %s" %(query, answer))
+						global answer=line
 						exit
+				query=query.split("my", 1)[1]
+				answer=answer.split("is", 1) [1]
+				print("Your %s is: %s" %(query, answer))
 				
 		
 else:
