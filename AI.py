@@ -9,6 +9,7 @@ if filecheck == 1:
 	with open('AI.dat', 'r') as file:
 		contents=file.read()
 	username=raw_input("What is your username?: ")
+	username=username.lower()
 	#If the user is in AI.dat and has their own file
 	if username.lower() in contents and os.path.isfile("%s.dat" %username):
 		#Open the commands file
