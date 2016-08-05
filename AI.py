@@ -11,9 +11,11 @@ if filecheck == 1:
 	username=raw_input("What is your username?: ")
 	#If the user is in AI.dat and has their own file
 	if username in contents and os.path.isfile("%s.pl" %username):
-		print("Welcome %s, how may I help you?" %username)
-		#Ask for a command
-		command=raw_input("Enter Command: ")
+		#Begin a loop
+		while True:
+			print("Welcome %s, how may I help you?" %username)
+			#Ask for a command
+			command=raw_input("Enter Command: ")
 		
 else:
 	print("Welcome to the AquaAI setup.")
