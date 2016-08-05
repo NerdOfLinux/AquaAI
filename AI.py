@@ -20,7 +20,7 @@ if filecheck == 1:
 			command=raw_input("Enter Command: ")
 			#If the word my or i is in the command, save it to a file
 			if "my" or "i" in command.lower():
-				file.write(command.lower()
+				file.write(command.lower())
 				
 		
 else:
