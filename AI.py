@@ -24,11 +24,16 @@ if filecheck == 1:
 				file.write("\n")
 			elif "?" in command:
 				query=command.lower()
-				print(query)
 				query=query.split("is", 1)[1]
-				print(query)
 				query=query.split("?", 1)[0]
-				print(query)
+				#Search for answer in Commands.dat
+				for line in file:
+					line=line.rstrip()
+					if query in line:
+						answer=line
+				query=query.split("my", 1)[1]
+				answer=answer.split("is", 1) [1]
+				print("Your %s is: %s" %(query, answer))
 				
 		
 else:
