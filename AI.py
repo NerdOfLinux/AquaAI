@@ -19,6 +19,9 @@ if filecheck == 1:
 			print("Welcome %s, how may I help you?" %username)
 			#Ask for a command
 			command=raw_input("Enter Command: ")
+			#Set basic commands
+			if command.lower() == "exit":
+				exit
 			#If a period is in the command, save it to a file
 			if "." in command.lower():
 				file.write(command.lower())
