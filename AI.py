@@ -31,7 +31,7 @@ if filecheck == 1:
 				for line in readfile:
 					line=line.rstrip()
 					if query in line:
-						global answer=line
+						global answer = line
 						exit
 				query=query.split("my", 1)[1]
 				answer=answer.split("is", 1) [1]
