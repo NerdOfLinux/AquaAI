@@ -9,6 +9,7 @@ if filecheck == 1:
 	with open('AI.dat', 'r') as file:
 		contents=file.read()
 	username=raw_input("What is your username?: ")
+	username=username.upper()
 	username=username.lower()
 	#If the user is in AI.dat and has their own file
 	if username.lower() in contents and os.path.isfile("%s.dat" %username):
@@ -39,7 +40,7 @@ if filecheck == 1:
 						exit
 				query=query.split("my", 1)[1]
 				answer=answer.split("is", 1) [1]
-				print("Your %s is: %s" %(query, answer))
+				print("Your %s is %s" %(query, answer))
 				
 		
 else:
