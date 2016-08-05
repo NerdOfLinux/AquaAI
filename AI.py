@@ -25,7 +25,7 @@ if filecheck == 1:
 			elif "?" in command:
 				readfile=open('Commands.dat', 'r')
 				query=command.lower()
-				query=query.split("is", 1)[1]
+				query=query.split("is ", 1)[1]
 				query=query.split("?", 1)[0]
 				#Search for answer in Commands.dat
 				for line in readfile:
