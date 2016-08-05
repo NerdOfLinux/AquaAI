@@ -27,19 +27,30 @@ if filecheck == 1:
 			if "." in command.lower():
 				file.write(command.lower())
 				file.write("\n")
+			#If there is a question mark in the command
 			elif "?" in command:
+				#Open the file as read only
 				readfile=open('%s.dat' %username, 'r')
+				#Set it to all lowercase
 				query=command.lower()
+				#Spilt the string after the word is
 				query=query.split("is ", 1)[1]
+				#Cut off the question mark
 				query=query.split("?", 1)[0]
 				#Search for answer in Commands.dat
 				for line in readfile:
+					#Cut off the newline
 					line=line.rstrip()
+					#If the query is in the current line
 					if query in line:
+						#Set the answer to the current line
 						answer=line
 						exit
+				#Take my out of the query
 				query=query.split("my", 1)[1]
+				#Split the answer after is
 				answer=answer.split("is", 1) [1]
+				#Return the answer to the user
 				print("Your %s is %s" %(query, answer))
 				
 		
