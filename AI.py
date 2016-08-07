@@ -91,4 +91,4 @@ else:
 		file.write("")
 	colors = ['yellow', 'red', 'blue', 'purple', 'orange']
 	with open ('AI.dat', 'w') as file:
-		file.write("my favorite color is %s." %random.choice(colors))
+		file.write("my favorite color is %s. \n" %random.choice(colors))
