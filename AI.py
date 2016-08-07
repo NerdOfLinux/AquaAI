@@ -1,6 +1,7 @@
 #Import required libraries
 import sys
 import os
+import random
 #filecheck=os.path.isfile("AI.pl")
 #Check which OS this is running on
 OSCheck=sys.platform
@@ -88,5 +89,6 @@ else:
 		file.write("\n")
 	with open('%s.dat' %username, 'w') as file:
 		file.write("")
+	colors = ['yellow', 'red', 'blue', 'purple', 'orange']
 	with open ('AI.dat', 'w') as file:
-		file.write()
+		file.write("my favorite color is %s." %random.choice(colors))
