@@ -28,11 +28,11 @@ if filecheck == 1:
 				print("To tell me about yourself, say a fact about yourself followed by a period. To ask about yourself, ask a question followed by a question mark. I am still learning to have my own favorites.")
 				
 			#If a period is in the command, save it to a file
-			if "." and "my" in command.lower():
+			if "." in command.lower() and "my" in command.lower():
 				file.write(command.lower())
 				file.write("\n")
 			#If there is a question mark in the command
-			elif "?" and "my" in command:
+			elif "?" in command.lower() and "my" in command.lower():
 				#Open the file as read only
 				readfile=open('%s.dat' %username, 'r')
 				#Set it to all lowercase
