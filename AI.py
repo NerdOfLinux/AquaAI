@@ -102,7 +102,9 @@ if filecheck == 1:
 				#Return the answer to the user
 				print("My%s is%s" %(query, answer))
 				
-		
+	else:
+		print("You are not a user yet.")
+		create=raw_input("Would you like to create a new account y)es or n)o?: ")
 else:
 	print("Welcome to the AquaAI setup.")
 	print("No spaces or special characters allowed.")
