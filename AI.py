@@ -3,7 +3,7 @@ import sys
 import os
 #filecheck=os.path.isfile("AI.pl")
 #Check if the file exists
-filecheck=os.path.isfile("AI.dat")
+filecheck=os.path.isfile("users.dat")
 #If the file exists, ask for a username
 if filecheck == 1:
 	with open('AI.dat', 'r') as file:
@@ -74,7 +74,7 @@ else:
 	#Get the user's birthday
 	#birthday=raw_input("When is your birthday (month/day in numbers)?: ")
 	#Write the username to a file
-	with open('AI.dat', 'w') as file:
+	with open('users.dat', 'w') as file:
 		file.write("%s" %username)
 		file.write("\n")
 	#Write user information to a prolog file
@@ -84,3 +84,5 @@ else:
 	#	file.write("birthday(%s)." %birthday)
 	with open('%s.dat' %username, 'w') as file:
 		file.write("")
+	with open ('AI.dat', 'w') as file:
+		file.write()
