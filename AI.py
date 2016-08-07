@@ -105,6 +105,15 @@ if filecheck == 1:
 	else:
 		print("You are not a user yet.")
 		create=raw_input("Would you like to create a new account y)es or n)o?: ")
+		if create == "n":
+			sys.exit()
+		elif create == "y":
+			username=raw_input("What would you like your username to be?: ")
+			username=username.lower()
+			with open('users.dat', 'a') as file:
+				file.write("%s \n" %username)
+			with open('%s.dat' %username, 'w') as file:
+				file.write("")
 else:
 	print("Welcome to the AquaAI setup.")
 	print("No spaces or special characters allowed.")
@@ -114,12 +123,13 @@ else:
 	username=username.lower()
 	#Write the username to a file
 	with open('users.dat', 'w') as file:
-		file.write("%s" %username)
-		file.write("\n")
+		file.write("%s \n" %username)
+	#Make a new file
 	with open('%s.dat' %username, 'w') as file:
 		file.write("")
+	#Define colors
 	colors = ['yellow', 'red', 'blue', 'purple', 'orange']
+	#Generate AI favorites
 	with open ('AI.dat', 'w') as file:
 		file.write("my favorite color is %s. \n" %random.choice(colors))
-	with open ('AI.dat', 'w') as file:
 		file.write("my favorite number is %s. \n" %random.choice(0,999))
