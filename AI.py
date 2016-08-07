@@ -21,8 +21,12 @@ if filecheck == 1:
 			#Ask for a command
 			command=raw_input("Enter Command: ")
 			#Set basic commands
+			#If the command is exit then exit using sys
 			if command.lower() == "exit":
 				sys.exit()
+			elif command.lower() == "help":
+				print("To tell me about yourself, say a fact about yourself followed by a period. To ask about yourself, ask a question followed by a question mark. I am still learning to have my own favorites.")
+				
 			#If a period is in the command, save it to a file
 			if "." in command.lower():
 				file.write(command.lower())
