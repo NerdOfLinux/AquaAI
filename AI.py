@@ -8,7 +8,7 @@ OSCheck=sys.platform
 filecheck=os.path.isfile("users.dat")
 #If the file exists, ask for a username
 if filecheck == 1:
-	with open('AI.dat', 'r') as file:
+	with open('users.dat', 'r') as file:
 		contents=file.read()
 	#Ask user for username
 	username=raw_input("What is your username?: ")
