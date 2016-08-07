@@ -82,20 +82,10 @@ else:
 	username=raw_input("What is your name(all lowercase)?: ")
 	#Save the username in lowercase
 	username=username.lower()
-	#print("Hello, %s, please answer a few questions about yourself:" %username)
-	#Get the user's favorite color
-	#color=raw_input("What is your favorite color?: ")
-	#Get the user's birthday
-	#birthday=raw_input("When is your birthday (month/day in numbers)?: ")
 	#Write the username to a file
 	with open('users.dat', 'w') as file:
 		file.write("%s" %username)
 		file.write("\n")
-	#Write user information to a prolog file
-	#with open('%s.pl' %username, 'w') as file:
-	#	file.write("favoritecolor(%s)." %color)
-	#	file.write("\n")
-	#	file.write("birthday(%s)." %birthday)
 	with open('%s.dat' %username, 'w') as file:
 		file.write("")
 	with open ('AI.dat', 'w') as file:
