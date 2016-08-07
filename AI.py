@@ -20,6 +20,9 @@ if filecheck == 1:
 	if username.lower() in contents and os.path.isfile("%s.dat" %username):
 		#Open the commands file
 		file=open('%s.dat' %username, 'a')
+		#If the OS is Mac use say
+		if OSCheck == "darwin":
+			os.system("echo Welcome, %s | say" %username)
 		#Begin a loop
 		while True:
 			print("Welcome %s, how may I help you?" %username)
