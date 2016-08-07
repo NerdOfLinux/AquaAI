@@ -35,7 +35,7 @@ if filecheck == 1:
 				sys.exit()
 			#If command is help explain how to use AI
 			elif command.lower() == "help":
-				print("To tell me about yourself, say a fact about yourself followed by a period. To ask about yourself, ask a question followed by a question mark. I am still learning to have my own favorites.")
+				print("To tell me about yourself, say a fact about yourself followed by a period. To ask a queston, put a question mark at the end of it.")
 			#If the command is clear or cls
 			elif command.lower() == "clear" or command.lower() == "cls":
 				#If the OS is Windows use the cls command
@@ -133,3 +133,4 @@ else:
 	with open ('AI.dat', 'w') as file:
 		file.write("my favorite color is %s. \n" %random.choice(colors))
 		file.write("my favorite number is %s. \n" %random.choice(0,999))
+		
