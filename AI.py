@@ -2,6 +2,8 @@
 import sys
 import os
 #filecheck=os.path.isfile("AI.pl")
+#Check which OS this is running on
+OSCheck=sys.platform
 #Check if the file exists
 filecheck=os.path.isfile("users.dat")
 #If the file exists, ask for a username
@@ -22,13 +24,22 @@ if filecheck == 1:
 		while True:
 			print("Welcome %s, how may I help you?" %username)
 			#Ask for a command
-			command=raw_input("Enter Command: ")
+			command=raw_input("Enter Info or Question: ")
 			#Set basic commands
 			#If the command is exit then exit using sys
 			if command.lower() == "exit":
 				sys.exit()
+			#If command is help explain how to use AI
 			elif command.lower() == "help":
 				print("To tell me about yourself, say a fact about yourself followed by a period. To ask about yourself, ask a question followed by a question mark. I am still learning to have my own favorites.")
+			#If the command is clear or cls
+			elif command.lower() == "clear" or "cls":
+				#If the OS is Windows use the cls command
+				if OSCheck == "win32":
+					os.system("cls")
+				#If the OS is not Windows, it is probably Mac or Linux
+				else:
+					os.system("clear")
 				
 			#If a period is in the command, save it to a file
 			if "." in command.lower() and "my" in command.lower():
