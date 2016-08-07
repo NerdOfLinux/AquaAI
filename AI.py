@@ -22,7 +22,7 @@ if filecheck == 1:
 			command=raw_input("Enter Command: ")
 			#Set basic commands
 			if command.lower() == "exit":
-				exit
+				sys.exit()
 			#If a period is in the command, save it to a file
 			if "." in command.lower():
 				file.write(command.lower())
