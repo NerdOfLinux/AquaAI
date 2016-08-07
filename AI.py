@@ -73,7 +73,7 @@ if filecheck == 1:
 				#Split the answer after is
 				answer=answer.split("is", 1) [1]
 				#Return the answer to the user
-				print("Your %s is%s" %(query, answer))
+				print("Your %s is %s" %(query, answer))
 			#If there is a question mark in the command
 			elif "?" in command.lower() and "your" in command.lower():
 				#Open the file as read only
@@ -100,7 +100,7 @@ if filecheck == 1:
 				#Split the answer after is
 				answer=answer.split("is", 1) [1]
 				#Return the answer to the user
-				print("My%s is%s" %(query, answer))
+				print("My %s is %s" %(query, answer))
 				
 		
 else:
@@ -119,3 +119,6 @@ else:
 	colors = ['yellow', 'red', 'blue', 'purple', 'orange']
 	with open ('AI.dat', 'w') as file:
 		file.write("my favorite color is %s. \n" %random.choice(colors))
+	numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
+	with open ('AI.dat', 'w') as file:
+		file.write("my favorite number is %s. \n" %random.choice(numbers))
