@@ -80,12 +80,16 @@ if filecheck == 1:
 						#Set the answer to the current line
 						answer=line
 						exit
-				#Take my out of the query
-				query=query.split("my", 1)[1]
-				#Split the answer after is
-				answer=answer.split("is", 1) [1]
-				#Return the answer to the user
-				print("Your %s is%s" %(query, answer))
+				#Check if answer is empty
+				if answer:
+					#Take my out of the query
+					query=query.split("my", 1)[1]
+					#Split the answer after is
+					answer=answer.split("is", 1) [1]
+					#Return the answer to the user
+					print("Your %s is%s" %(query, answer))
+				else:
+					print("I don't believe you told me.")
 			#If there is a question mark in the command
 			elif "?" in command and "your" in command:
 				#Open the file as read only
@@ -107,12 +111,16 @@ if filecheck == 1:
 						#Set the answer to the current line
 						answer=line
 						exit
-				#Take my out of the query
-				query=query.split("my", 1)[1]
-				#Split the answer after is
-				answer=answer.split("is", 1) [1]
-				#Return the answer to the user
-				print("My%s is%s" %(query, answer))
+				#If the answer is empty, say the error
+				if answer:
+					#Take my out of the query
+					query=query.split("my", 1)[1]
+					#Split the answer after is
+					answer=answer.split("is", 1) [1]
+					#Return the answer to the user
+					print("My%s is%s" %(query, answer))
+				else:
+					print("I haven't thought of that yet.")
 				
 	else:
 		print("You are not a user yet.")
