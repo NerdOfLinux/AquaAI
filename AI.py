@@ -2,7 +2,7 @@
 import sys
 import os
 import random
-import time;
+import time
 #filecheck=os.path.isfile("AI.pl")
 #Check which OS this is running on
 OSCheck=sys.platform
