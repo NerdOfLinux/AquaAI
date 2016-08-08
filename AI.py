@@ -3,11 +3,6 @@ import sys
 import os
 import random
 
-#Defining a coloring function.
-CSI="\x1B["
-reset=CSI+"m"
-
-
 
 #filecheck=os.path.isfile("AI.pl")
 #Check which OS this is running on
@@ -46,7 +41,7 @@ if filecheck == 1:
 			os.system("echo Welcome, %s | say" %username)
 		#Begin a loop
 		while True:
-			print (CSI+"31;40m" + "Welcome %s" + CSI + "0m" %username)
+			print("Welcome %s, how may I help you?" %username)
 			#Ask for a command
 			command=raw_input("Enter Info or Question: ")
 			#Set basic commands
