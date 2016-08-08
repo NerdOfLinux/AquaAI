@@ -163,3 +163,5 @@ else:
 		file.write("my favorite food is %s. \n" %random.choice(food))
 		file.write("my favorite os is %s. \n" %OSCheck)
 		
+	with open ('time.py', 'r') as file:
+		os.system("python time.py")
