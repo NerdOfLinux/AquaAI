@@ -2,13 +2,8 @@
 import sys
 import os
 import random
-
-
 #filecheck=os.path.isfile("AI.pl")
 #Check which OS this is running on
-
-
-
 OSCheck=sys.platform
 #Better define the OS
 #win32 is Windows
@@ -45,14 +40,16 @@ if filecheck == 1:
 			#Ask for a command
 			command=raw_input("Enter Info or Question: ")
 			#Set basic commands
+			#Make command lowercase
+			command=command.lower()
 			#If the command is exit then exit using sys
-			if command.lower() == "exit":
+			if command == "exit":
 				sys.exit()
 			#If command is help explain how to use AI
-			elif command.lower() == "help":
+			elif command == "help":
 				print("To tell me about yourself, say a fact about yourself followed by a period. To ask a queston, put a question mark at the end of it.")
 			#If the command is clear or cls
-			elif command.lower() == "clear" or command.lower() == "cls":
+			elif command == "clear" or command.lower() == "cls":
 				#If the OS is Windows use the cls command
 				if OSCheck == "win32":
 					os.system("cls")
@@ -61,15 +58,15 @@ if filecheck == 1:
 					os.system("clear")
 				
 			#If a period is in the command, save it to a file
-			if "." in command.lower() and "my" in command.lower():
+			if "." in command and "my" in command:
 				file.write(command.lower())
 				file.write("\n")
 			#If there is a question mark in the command
-			elif "?" in command.lower() and "my" in command.lower():
+			elif "?" in command and "my" in command:
 				#Open the file as read only
 				readfile=open('%s.dat' %username, 'r')
 				#Set it to all lowercase
-				query=command.lower()
+				query=command
 				#Spilt the string after the word is
 				query=query.split("is ", 1)[1]
 				#Cut off the question mark
@@ -83,18 +80,22 @@ if filecheck == 1:
 						#Set the answer to the current line
 						answer=line
 						exit
-				#Take my out of the query
-				query=query.split("my", 1)[1]
-				#Split the answer after is
-				answer=answer.split("is", 1) [1]
-				#Return the answer to the user
-				print("Your %s is%s" %(query, answer))
+				#Check if answer is empty
+				if answer != "":
+					#Take my out of the query
+					query=query.split("my", 1)[1]
+					#Split the answer after is
+					answer=answer.split("is", 1) [1]
+					#Return the answer to the user
+					print("Your %s is%s" %(query, answer))
+				else:
+					print("I don't believe you told me.")
 			#If there is a question mark in the command
-			elif "?" in command.lower() and "your" in command.lower():
+			elif "?" in command and "your" in command:
 				#Open the file as read only
 				readfile=open('AI.dat', 'r')
 				#Set it to all lowercase
-				query=command.lower()
+				query=command
 				#Replace your with my so it can be found.
 				query=query.replace("your", "my")
 				#Spilt the string after the word is
@@ -110,12 +111,16 @@ if filecheck == 1:
 						#Set the answer to the current line
 						answer=line
 						exit
-				#Take my out of the query
-				query=query.split("my", 1)[1]
-				#Split the answer after is
-				answer=answer.split("is", 1) [1]
-				#Return the answer to the user
-				print("My%s is%s" %(query, answer))
+				#If the answer is empty, say the error
+				if answer != "":
+					#Take my out of the query
+					query=query.split("my", 1)[1]
+					#Split the answer after is
+					answer=answer.split("is", 1) [1]
+					#Return the answer to the user
+					print("My%s is%s" %(query, answer))
+				else:
+					print("I haven't thought of that yet.")
 				
 	else:
 		print("You are not a user yet.")
