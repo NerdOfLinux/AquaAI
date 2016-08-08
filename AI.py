@@ -46,7 +46,7 @@ if filecheck == 1:
 			os.system("echo Welcome, %s | say" %username)
 		#Begin a loop
 		while True:
-			print ("CSI"+"31;40m" + "Welcome %s" + CSI + "0m" %username)
+			print (CSI+"31;40m" + "Welcome %s" + CSI + "0m" %username)
 			#Ask for a command
 			command=raw_input("Enter Info or Question: ")
 			#Set basic commands
