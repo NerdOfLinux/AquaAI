@@ -156,7 +156,7 @@ else:
 	#Define food
 	food = ['electricity', 'RAM']
 	#Define local time
-	localtime = time.asctime( time.localtime(time.time()) )
+	localtime = time.localtime(time.time())
 	with open ('time.dat', 'w') as file:
 		file.write("my local time seems is %s. \n" %localtime)
 	#Generate AI favorites
