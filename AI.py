@@ -2,6 +2,7 @@
 import sys
 import os
 import random
+import time
 #filecheck=os.path.isfile("AI.pl")
 #Check which OS this is running on
 OSCheck=sys.platform
@@ -154,6 +155,10 @@ else:
 	colors = ['yellow', 'red', 'blue', 'purple', 'orange']
 	#Define food
 	food = ['electricity', 'RAM']
+	#Define local time
+	localtime = time.asctime( time.localtime(time.time()) )
+	with open ('time.dat', 'w') as file:
+		file.write("my local time seems is %s. \n" %localtime)
 	#Generate AI favorites
 	with open ('AI.dat', 'w') as file:
 	#Write to AI.dat
@@ -163,5 +168,3 @@ else:
 		file.write("my favorite food is %s. \n" %random.choice(food))
 		file.write("my favorite os is %s. \n" %OSCheck)
 		
-	with open ('time.py', 'r') as file:
-		os.system("python time.py")
