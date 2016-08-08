@@ -148,4 +148,4 @@ else:
 		file.write("my favorite number is %s. \n" %random.randint(0,999))
 		file.write("my birthday is on July 19th. \n")
 		file.write("my favorite food is %s. \n" %random.choice(food))
-		file.write("my favorite os is %s. \n" %OSCheck)
+		file.write("my favorite OS is %s. \n" %OSCheck)
