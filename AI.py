@@ -36,6 +36,8 @@ if filecheck == 1:
 			os.system("echo Welcome, %s | say" %username)
 		#Begin a loop
 		while True:
+			#Set answer to zero
+			answer=0
 			print("Welcome %s, how may I help you?" %username)
 			#Ask for a command
 			command=raw_input("Enter Info or Question: ")
@@ -81,7 +83,7 @@ if filecheck == 1:
 						answer=line
 						exit
 				#Check if answer is empty
-				if answer:
+				if answer == 0:
 					print("I don't believe you told me.")
 				else:
 					#Take my out of the query
@@ -112,7 +114,7 @@ if filecheck == 1:
 						answer=line
 						exit
 				#If the answer is empty, say the error
-				if answer:
+				if answer == 0:
 					print("I haven't thought of that yet.")
 				else:
 					#Take my out of the query
