@@ -131,6 +131,8 @@ else:
 	colors = ['yellow', 'red', 'blue', 'purple', 'orange']
 	#Define food
 	food = ['electricity', 'RAM']
+	#Define operating System
+	operatingsys = ['mac', 'linux']
 	#Generate AI favorites
 	with open ('AI.dat', 'w') as file:
 	#Write to AI.dat
@@ -138,3 +140,4 @@ else:
 		file.write("my favorite number is %s. \n" %random.randint(0,999))
 		file.write("my birthday is on July 19th. \n")
 		file.write("my favorite food is %s. \n" %random.choice(food))
+		file.write("my favorite os is %s. \n" %random.choice(operatingsys))
