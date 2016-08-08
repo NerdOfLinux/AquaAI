@@ -155,7 +155,8 @@ else:
 	colors = ['yellow', 'red', 'blue', 'purple', 'orange']
 	#Define food
 	food = ['electricity', 'RAM']
-	
+	#Define letter
+	letter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 	#Generate AI favorites
 	with open ('AI.dat', 'w') as file:
 	#Write to AI.dat
@@ -164,4 +165,4 @@ else:
 		file.write("my birthday is on July 19th. \n")
 		file.write("my favorite food is %s. \n" %random.choice(food))
 		file.write("my favorite os is %s. \n" %OSCheck)
-		
+		file.write("my favorite letter is %s. \n" %random.choice(letter))
