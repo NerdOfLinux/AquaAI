@@ -161,3 +161,4 @@ else:
 		file.write("my birthday is on July 19th. \n")
 		file.write("my favorite food is %s. \n" %random.choice(food))
 		file.write("my favorite os is %s. \n" %OSCheck)
+		file.write("the sky is blue")
