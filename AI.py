@@ -5,6 +5,16 @@ import random
 #filecheck=os.path.isfile("AI.pl")
 #Check which OS this is running on
 OSCheck=sys.platform
+#Better define the OS
+#win32 is Windows
+if OSCheck == "win32":
+	OSCheck = "Windows"
+#darwin is Mac
+elif OSCheck == "darwin:
+	OSCheck = "Mac"
+#linux2 is Linux
+elif OSCheck == "linux2":
+	OSCheck == "Linux"
 #Check if the file exists
 filecheck=os.path.isfile("users.dat")
 #If the file exists, ask for a username
@@ -22,7 +32,7 @@ if filecheck == 1:
 		#Open the commands file
 		file=open('%s.dat' %username, 'a')
 		#If the OS is Mac use say
-		if OSCheck == "darwin":
+		if OSCheck == "Mac":
 			os.system("echo Welcome, %s | say" %username)
 		#Begin a loop
 		while True:
@@ -131,6 +141,8 @@ else:
 	colors = ['yellow', 'red', 'blue', 'purple', 'orange']
 	#Define food
 	food = ['electricity', 'RAM']
+	#Define operating System
+	operating_system = ['mac', 'linux']
 	#Generate AI favorites
 	with open ('AI.dat', 'w') as file:
 	#Write to AI.dat
@@ -138,4 +150,4 @@ else:
 		file.write("my favorite number is %s. \n" %random.randint(0,999))
 		file.write("my birthday is on July 19th. \n")
 		file.write("my favorite food is %s. \n" %random.choice(food))
-		file.write("my favorite os is %s. \n" %OSCheck)
+		file.write("my favorite os is %s. \n" %random.choice(operating_system))
