@@ -10,7 +10,7 @@ OSCheck=sys.platform
 if OSCheck == "win32":
 	OSCheck = "Windows"
 #darwin is Mac
-elif OSCheck == "darwin:
+elif OSCheck == "darwin":
 	OSCheck = "Mac"
 #linux2 is Linux
 elif OSCheck == "linux2":
