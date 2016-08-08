@@ -135,4 +135,3 @@ else:
 		file.write("my favorite color is %s. \n" %random.choice(colors))
 		file.write("my favorite number is %s. \n" %random.randint(0,999))
 		file.write("my birthday is on July 19th. \n")
-		
