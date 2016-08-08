@@ -37,6 +37,7 @@ if filecheck == 1:
 		#Begin a loop
 		while True:
 			#Set answer to zero
+			print("Please use correct grammar(ex: end a question with a question mark!)")
 			answer=0
 			print("Welcome %s, how may I help you?" %username)
 			#Ask for a command
