@@ -81,7 +81,7 @@ if filecheck == 1:
 						answer=line
 						exit
 				#Check if answer is empty
-				if answer:
+				if answer != "":
 					#Take my out of the query
 					query=query.split("my", 1)[1]
 					#Split the answer after is
@@ -112,7 +112,7 @@ if filecheck == 1:
 						answer=line
 						exit
 				#If the answer is empty, say the error
-				if answer:
+				if answer != "":
 					#Take my out of the query
 					query=query.split("my", 1)[1]
 					#Split the answer after is
