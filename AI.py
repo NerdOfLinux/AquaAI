@@ -35,10 +35,12 @@ if filecheck == 1:
 		#If the OS is Mac use say
 		if OSCheck == "Mac":
 			os.system("echo Welcome, %s | say" %username)
+			print("Please use correct grammar(ex: end a question with a question mark!")
 		#Begin a loop
 		while True:
-			#Set answer to zero
-			print("Please use correct grammar(ex: end a question with a question mark!)")
+		
+			
+			#set the answer to zero
 			answer=0
 			print("Welcome %s, how may I help you?" %username)
 			#Ask for a command
