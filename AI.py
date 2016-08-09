@@ -52,6 +52,9 @@ if filecheck == 1:
 			#If command is help explain how to use AI
 			elif command == "help":
 				print("To tell me about yourself, say a fact about yourself followed by a period. To ask a queston, put a question mark at the end of it.")
+			elif command == "list":
+				print("A few example of things you can ask me are: my favorite color, when I was born, and my favorite color.")
+			
 			#If the command is clear or cls
 			elif command == "clear" or command.lower() == "cls":
 				#If the OS is Windows use the cls command
