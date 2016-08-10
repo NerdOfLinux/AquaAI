@@ -14,3 +14,6 @@ python setup.py install --user
 cd ..
 cd pyPortAudio
 python setup.py install --user
+cd ..
+rm -rf SpeechRecognition-3.4.6
+rm -rf pyPortAudio
