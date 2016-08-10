@@ -142,7 +142,7 @@ if filecheck == 1:
 			with open('users.dat', 'a') as file:
 				file.write("%s \n" %username)
 			with open('%s.dat' %username, 'w') as file:
-				file.write("")
+				file.write("my name is %s. \n" %username)
 else:
 	print("Welcome to the AquaAI setup.")
 	print("No spaces or special characters allowed.")
@@ -155,7 +155,7 @@ else:
 		file.write("%s \n" %username)
 	#Make a new file
 	with open('%s.dat' %username, 'w') as file:
-		file.write("")
+		file.write("my name is %s. \n" %username)
 	#Define colors
 	colors = ['yellow', 'red', 'blue', 'purple', 'orange']
 	#Define food
