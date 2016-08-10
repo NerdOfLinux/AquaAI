@@ -1,8 +1,8 @@
 #!/usr/bin/python
 #Import required libraries
-import sys
-import os
+import sys, os
 import random
+import pybrain
 #filecheck=os.path.isfile("AI.pl")
 #Check which OS this is running on
 OSCheck=sys.platform
