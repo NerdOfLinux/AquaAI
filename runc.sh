@@ -1,3 +1,3 @@
 g++ $1
-./a.out
+./A.out
 rm a.out
