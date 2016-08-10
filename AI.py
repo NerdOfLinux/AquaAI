@@ -171,4 +171,4 @@ else:
 		file.write("my favorite food is %s. \n" %random.choice(food))
 		file.write("my favorite os is %s. \n" %OSCheck)
 		file.write("my favorite letter is %s. \n" %random.choice(letter) )
-		file.write("my name is Aqua")
+		file.write("my name is Aqua.")
