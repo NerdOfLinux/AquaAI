@@ -159,7 +159,7 @@ else:
 	#Define colors
 	colors = ['yellow', 'red', 'blue', 'purple', 'orange']
 	#Define food
-	food = ['electricity', 'RAM']
+	food = ['electricity', 'RAM', 'CPU']
 	#Define letter
 	letter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 	#Generate AI favorites
