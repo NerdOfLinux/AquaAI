@@ -15,6 +15,10 @@ cd ..
 cd pyPortAudio
 python setup.py install --user
 cd ..
+if [ $2 = "keep" ]
+then
+  exit 0
+fi
 rm -rf SpeechRecognition-3.4.6
 rm -rf pyPortAudio
 rm SpeechRecognition-3.4.6.tar.gz
