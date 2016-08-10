@@ -11,8 +11,7 @@ int main()
 	cout << "Please enter your username: ";
 	getline (cin, username);
 	//Print Welcome
-	//cout << "Welcome, " << username << "." << endl;
-	System("say" << username << endl);
+	cout << "Welcome, " << username << "." << endl;
 	
 	//exit
 	return 0;
