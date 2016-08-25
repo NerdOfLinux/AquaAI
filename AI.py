@@ -16,8 +16,15 @@ elif OSCheck == "darwin":
 #linux2 is Linux
 elif OSCheck == "linux2":
 	OSCheck == "Linux"
-#Check if the file exists
-filecheck=os.path.isfile("users.dat")
+#Make function speak to make speaking faster
+def speak( str ):
+	#IF the OS is mac, use the speak command
+	if OSCheck == "Mac":
+		os.system("echo %s | speak" %str)
+	#If the OS is Linux, use espeak
+	elif OSChek == "Linux":
+		os.system("echo %s | espeak" %str)
+	return
 #If the file exists, ask for a username
 if filecheck == 1:
 	with open('users.dat', 'r') as file:
@@ -29,13 +36,12 @@ if filecheck == 1:
 	#Make the username lowercase
 	username=username.lower()
 	#If the user is in AI.dat and has their own file
-	if username.lower() in contents and os.path.isfile("%s.dat" %username):
+	if username in contents and os.path.isfile("%s.dat" %username):
 		#Open the commands file
 		file=open('%s.dat' %username, 'a')
-		#If the OS is Mac use say
-		if OSCheck == "Mac":
-			os.system("echo Welcome, %s | say" %username)
-			print("Please use correct grammar(ex: end a question with a question mark!)")
+		#Call the speak function
+		speak("Hello, %s." %username)
+		print("Please use correct grammar(ex: end a question with a question mark!)")
 		#Begin a loop
 		while True:
 		
