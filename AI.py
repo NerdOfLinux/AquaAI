@@ -4,6 +4,7 @@ import sys, os
 import random
 #import pybrain
 #filecheck=os.path.isfile("AI.pl")
+filecheck=os.path.isfile("AI.dat")
 #Check which OS this is running on
 OSCheck=sys.platform
 #Better define the OS
@@ -18,11 +19,11 @@ elif OSCheck == "linux2":
 	OSCheck == "Linux"
 #Make function speak to make speaking faster
 def speak( str ):
-	#IF the OS is mac, use the speak command
+	#If the OS is mac, use the speak command
 	if OSCheck == "Mac":
 		os.system("echo %s | speak" %str)
 	#If the OS is Linux, use espeak
-	elif OSChek == "Linux":
+	elif OSCheck == "Linux":
 		os.system("echo %s | espeak" %str)
 	return
 #If the file exists, ask for a username
@@ -56,6 +57,10 @@ if filecheck == 1:
 			command=command.lower()
 			#If the command is exit then exit using sys
 			if command == "exit":
+				sys.exit()
+			#If command is bye then exit
+			if command == "bye":
+				print("Bye, %s." %username)
 				sys.exit()
 			#If command is help explain how to use AI
 			elif command == "help":
