@@ -4,7 +4,7 @@ import sys, os
 import random
 #import pybrain
 #filecheck=os.path.isfile("AI.pl")
-filecheck=os.path.isfile("AI.dat")
+filecheck=os.path.isfile("users.dat")
 #Check which OS this is running on
 OSCheck=sys.platform
 #Better define the OS
