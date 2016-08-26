@@ -1,0 +1,4 @@
+Requirements: 
+  1.) Pybrain
+  2.) Speech Recignition from: https://pypi.python.org/pypi/SpeechRecognition/ Download Button
+  
