@@ -2,7 +2,7 @@
 #Import required libraries
 import sys, os
 import random
-#import pybrain
+import speech_recognition as sr
 #filecheck=os.path.isfile("AI.pl")
 filecheck=os.path.isfile("users.dat")
 #Check which OS this is running on
@@ -25,31 +25,48 @@ def speak( speech ):
 	#If the OS is Linux, use espeak
 	elif OSCheck == "Linux":
 		os.system("echo %s | espeak" %speech)
+#Make function to determine if input is a question or statement
+def question( audio ):
+	global is_question
+	audio=audio.split()
+	if audio[0] == "my":
+		is_question="0"
+	elif audio[0] == "what" or audio[0] == "when":
+		is_question="1"
 	return
 #If the file exists, ask for a username
 if filecheck == 1:
 	with open('users.dat', 'r') as file:
 		contents=file.read()
 	#Ask user for username
-	username=input("What is your username?: ")
+	username=raw_input("What is your username?: ")
 	#Make the username all upercase
 	username=username.upper()
 	#Make the username lowercase
 	username=username.lower()
 	#If the user is in AI.dat and has their own file
 	if username in contents and os.path.isfile("%s.dat" %username):
-		#Open the commands file
-		file=open('%s.dat' %username, 'a')
-		#Call the speak function
-		speak("Hello, %s, how may I help you?" %username)
 		print("Please use correct grammar(ex: end a question with a question mark!)")
 		#Begin a loop
 		while True:
+			#Open the commands file
+			file=open('%s.dat' %username, 'a')
 			#set the answer to zero
 			answer=0
-			print(("Welcome %s, how may I help you?" %username))
-			#Ask for a command
-			command=input("Enter Info or Question: ")
+			#Get audio
+			speak("How may I help you, %s?" %username)
+			r = sr.Recognizer()
+			
+			with sr.Microphone() as source:
+				audio = r.listen(source)
+			#Speech Recognition
+			try:
+				command=r.recognize_sphinx(audio)
+				print(command)
+			except sr.UnknownValueError:
+				speak("Please try agian, I didn't understand.")
+				continue
+				
 			#Set basic commands
 			#Make command lowercase
 			command=command.lower()
@@ -58,13 +75,13 @@ if filecheck == 1:
 				sys.exit()
 			#If command is bye then exit
 			if command == "bye":
-				print(("Bye, %s." %username))
+				speak("Bye, %s." %username)
 				sys.exit()
 			#If command is help explain how to use AI
 			elif command == "help":
-				print("To tell me about yourself, say a fact about yourself followed by a period. To ask a queston, put a question mark at the end of it.")
+				speak("To tell me about yourself, say a fact about yourself followed by a period. To ask a queston, put a question mark at the end of it.")
 			elif command == "list":
-				print("A few example of things you can ask me are: my favorite color, when I was born, and my favorite color.")
+				speak("A few example of things you can ask me are: my favorite color, when I was born, and my favorite color.")
 			
 			#If the command is clear or cls
 			elif command == "clear" or command.lower() == "cls":
@@ -74,15 +91,18 @@ if filecheck == 1:
 				#If the OS is not Windows, it is probably Mac or Linux
 				else:
 					os.system("clear")
-				
+			#Check if command is a question or statement
+			question(command)
 			#If a period is in the command, save it to a file
-			if "." in command and "my" in command:
+			if is_question == "0" and "my" in command:
 				file.write(command.lower())
 				file.write("\n")
+				file.close()
 			#If there is a question mark in the command
-			elif "?" in command and "my" in command:
+			elif  is_question == "1" and "my" in command:
 				#Open the file as read only
 				readfile=open('%s.dat' %username, 'r')
+				file.close()
 				#Set it to all lowercase
 				query=command
 				#Spilt the string after the word is
@@ -100,16 +120,16 @@ if filecheck == 1:
 						exit
 				#Check if answer is empty
 				if answer == 0:
-					print("I don't believe you told me.")
+					speak("I don't believe you told me.")
 				else:
 					#Take my out of the query
 					query=query.split("my", 1)[1]
 					#Split the answer after is
 					answer=answer.split("is", 1) [1]
 					#Return the answer to the user
-					print(("Your %s is%s" %(query, answer)))
+					speak("Your %s is%s" %(query, answer))
 			#If there is a question mark in the command
-			elif "?" in command and "your" in command:
+			elif is_question == "1" and "your" in command:
 				#Open the file as read only
 				readfile=open('AI.dat', 'r')
 				#Set it to all lowercase
@@ -131,22 +151,22 @@ if filecheck == 1:
 						exit
 				#If the answer is empty, say the error
 				if answer == 0:
-					print("I haven't thought of that yet.")
+					speak("I haven't thought of that yet.")
 				else:
 					#Take my out of the query
 					query=query.split("my", 1)[1]
 					#Split the answer after is
 					answer=answer.split("is", 1) [1]
 					#Return the answer to the user
-					print(("My%s is%s" %(query, answer)))
+					print("My%s is%s" %(query, answer))
 				
 	else:
 		print("You are not a user yet.")
-		create=input("Would you like to create a new account y)es or n)o?: ")
+		create=raw_input("Would you like to create a new account y)es or n)o?: ")
 		if create == "n":
 			sys.exit()
 		elif create == "y":
-			username=input("What would you like your username to be?: ")
+			username=raw_input("What would you like your username to be?: ")
 			username=username.lower()
 			with open('users.dat', 'a') as file:
 				file.write("%s \n" %username)
@@ -156,7 +176,7 @@ else:
 	print("Welcome to the AquaAI setup.")
 	print("No spaces or special characters allowed.")
 	#Ask for the username
-	username=input("What is your name(all lowercase)?: ")
+	username=raw_input("What is your name(all lowercase)?: ")
 	#Save the username in lowercase
 	username=username.lower()
 	#Write the username to a file
@@ -186,5 +206,5 @@ else:
 		file.write("my favorite os is %s. \n" %OSCheck)
 		#Generate favorite letter
 		file.write("my favorite letter is %s. \n" %random.choice(letter) )
-		#Make name Aqua
+		#Set name to Aqua
 		file.write("my name is Aqua.")
