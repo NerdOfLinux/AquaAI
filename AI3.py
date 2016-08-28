@@ -4,6 +4,7 @@ import sys, os
 import random
 #import pybrain
 #filecheck=os.path.isfile("AI.pl")
+filecheck=os.path.isfile("users.dat")
 #Check which OS this is running on
 OSCheck=sys.platform
 #Better define the OS
@@ -15,9 +16,16 @@ elif OSCheck == "darwin":
 	OSCheck = "Mac"
 #linux2 is Linux
 elif OSCheck == "linux2":
-	OSCheck == "Linux"
-#Check if the file exists
-filecheck=os.path.isfile("users.dat")
+	OSCheck = "Linux"
+#Make function speak to make speaking faster
+def speak( speech ):
+	#If the OS is mac, use the speak command
+	if OSCheck == "Mac":
+		os.system("echo %s | say" %speech)
+	#If the OS is Linux, use espeak
+	elif OSCheck == "Linux":
+		os.system("echo %s | espeak" %speech)
+	return
 #If the file exists, ask for a username
 if filecheck == 1:
 	with open('users.dat', 'r') as file:
@@ -29,17 +37,14 @@ if filecheck == 1:
 	#Make the username lowercase
 	username=username.lower()
 	#If the user is in AI.dat and has their own file
-	if username.lower() in contents and os.path.isfile("%s.dat" %username):
+	if username in contents and os.path.isfile("%s.dat" %username):
 		#Open the commands file
 		file=open('%s.dat' %username, 'a')
-		#If the OS is Mac use say
-		if OSCheck == "Mac":
-			os.system("echo Welcome, %s | say" %username)
-			print("Please use correct grammar(ex: end a question with a question mark!)")
+		#Call the speak function
+		speak("Hello, %s, how may I help you?" %username)
+		print("Please use correct grammar(ex: end a question with a question mark!)")
 		#Begin a loop
 		while True:
-		
-			
 			#set the answer to zero
 			answer=0
 			print(("Welcome %s, how may I help you?" %username))
@@ -50,6 +55,10 @@ if filecheck == 1:
 			command=command.lower()
 			#If the command is exit then exit using sys
 			if command == "exit":
+				sys.exit()
+			#If command is bye then exit
+			if command == "bye":
+				print(("Bye, %s." %username))
 				sys.exit()
 			#If command is help explain how to use AI
 			elif command == "help":
@@ -165,10 +174,17 @@ else:
 	#Generate AI favorites
 	with open ('AI.dat', 'w') as file:
 	#Write to AI.dat
+		#Make favorite color
 		file.write("my favorite color is %s. \n" %random.choice(colors))
+		#Generate favorite number
 		file.write("my favorite number is %s. \n" %random.randint(0,999))
+		#Birthday is the original date of when AquaAI was started
 		file.write("my birthday is on July 19th. \n")
+		#Generate favorite food
 		file.write("my favorite food is %s. \n" %random.choice(food))
+		#Make favorite OS equal to current OS
 		file.write("my favorite os is %s. \n" %OSCheck)
+		#Generate favorite letter
 		file.write("my favorite letter is %s. \n" %random.choice(letter) )
+		#Make name Aqua
 		file.write("my name is Aqua.")
