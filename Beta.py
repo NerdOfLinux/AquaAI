@@ -2,7 +2,7 @@
 #Import required libraries
 import sys, os
 import random
-#import pybrain
+import speech_recognition as sr
 #filecheck=os.path.isfile("AI.pl")
 filecheck=os.path.isfile("users.dat")
 #Check which OS this is running on
@@ -40,16 +40,24 @@ if filecheck == 1:
 	if username in contents and os.path.isfile("%s.dat" %username):
 		#Open the commands file
 		file=open('%s.dat' %username, 'a')
-		#Call the speak function
-		speak("Hello, %s, how may I help you?" %username)
 		print("Please use correct grammar(ex: end a question with a question mark!)")
 		#Begin a loop
 		while True:
 			#set the answer to zero
 			answer=0
-			print("Welcome %s, how may I help you?" %username)
-			#Ask for a command
-			command=raw_input("Enter Info or Question: ")
+			#Get audio
+			r=sr.Recognizer()
+			with sr.Microphone as source:
+				speak("Welcome %s, how may I help you?" %username)
+				audio=r.listen(source)
+			#Speech Recognition
+			try:
+				command=r.recognize_sphinx(audio)
+			except sr.UnknownValueError:
+				with sr.Microphone as source:
+					speak("Please try agian, I didn't understand.")
+					audio=r.listen(source)
+				
 			#Set basic commands
 			#Make command lowercase
 			command=command.lower()
