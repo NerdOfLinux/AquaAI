@@ -138,7 +138,7 @@ if filecheck == 1:
 						exit
 				#If the answer is empty, say the error
 				if answer == 0:
-					print("I haven't thought of that yet.")
+					speak("I haven't thought of that yet.")
 				else:
 					#Take my out of the query
 					query=query.split("my", 1)[1]
