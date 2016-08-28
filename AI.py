@@ -18,13 +18,13 @@ elif OSCheck == "darwin":
 elif OSCheck == "linux2":
 	OSCheck = "Linux"
 #Make function speak to make speaking faster
-def speak( str ):
+def speak( speech ):
 	#If the OS is mac, use the speak command
 	if OSCheck == "Mac":
-		os.system("echo %s | say" %str)
+		os.system("echo %s | say" %speech)
 	#If the OS is Linux, use espeak
 	elif OSCheck == "Linux":
-		os.system("echo %s | espeak" %str)
+		os.system("echo %s | espeak" %speech)
 	return
 #If the file exists, ask for a username
 if filecheck == 1:
