@@ -66,13 +66,13 @@ if filecheck == 1:
 				sys.exit()
 			#If command is bye then exit
 			if command == "bye":
-				print("Bye, %s." %username)
+				speak("Bye, %s." %username)
 				sys.exit()
 			#If command is help explain how to use AI
 			elif command == "help":
-				print("To tell me about yourself, say a fact about yourself followed by a period. To ask a queston, put a question mark at the end of it.")
+				speak("To tell me about yourself, say a fact about yourself followed by a period. To ask a queston, put a question mark at the end of it.")
 			elif command == "list":
-				print("A few example of things you can ask me are: my favorite color, when I was born, and my favorite color.")
+				speak("A few example of things you can ask me are: my favorite color, when I was born, and my favorite color.")
 			
 			#If the command is clear or cls
 			elif command == "clear" or command.lower() == "cls":
@@ -108,14 +108,14 @@ if filecheck == 1:
 						exit
 				#Check if answer is empty
 				if answer == 0:
-					print("I don't believe you told me.")
+					speak("I don't believe you told me.")
 				else:
 					#Take my out of the query
 					query=query.split("my", 1)[1]
 					#Split the answer after is
 					answer=answer.split("is", 1) [1]
 					#Return the answer to the user
-					print("Your %s is%s" %(query, answer))
+					speak("Your %s is%s" %(query, answer))
 			#If there is a question mark in the command
 			elif "?" in command and "your" in command:
 				#Open the file as read only
