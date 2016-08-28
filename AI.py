@@ -21,7 +21,7 @@ elif OSCheck == "linux2":
 def speak( str ):
 	#If the OS is mac, use the speak command
 	if OSCheck == "Mac":
-		os.system("echo %s | speak" %str)
+		os.system("echo %s | say" %str)
 	#If the OS is Linux, use espeak
 	elif OSCheck == "Linux":
 		os.system("echo %s | espeak" %str)
