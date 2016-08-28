@@ -46,10 +46,10 @@ if filecheck == 1:
 			#set the answer to zero
 			answer=0
 			#Get audio
-			r=sr.Recognizer()
-			with sr.Microphone as source:
-				speak("Welcome %s, how may I help you?" %username)
-				audio=r.listen(source)
+			r = sr.Recognizer()
+			with sr.Microphone() as source:
+    				speak("How may I help you, %s?" %username)
+				audio = r.listen(source)
 			#Speech Recognition
 			try:
 				command=r.recognize_sphinx(audio)
