@@ -53,6 +53,7 @@ if filecheck == 1:
 			#Speech Recognition
 			try:
 				command=r.recognize_google(audio)
+				print(command)
 			except sr.UnknownValueError:
 				speak("Please try agian, I didn't understand.")
 				continue
