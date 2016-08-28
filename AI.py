@@ -41,7 +41,7 @@ if filecheck == 1:
 		#Open the commands file
 		file=open('%s.dat' %username, 'a')
 		#Call the speak function
-		speak("Hello, %s, hwo may I help you?" %username)
+		speak("Hello, %s, how may I help you?" %username)
 		print("Please use correct grammar(ex: end a question with a question mark!)")
 		#Begin a loop
 		while True:
