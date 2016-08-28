@@ -193,5 +193,5 @@ else:
 		file.write("my favorite os is %s. \n" %OSCheck)
 		#Generate favorite letter
 		file.write("my favorite letter is %s. \n" %random.choice(letter) )
-		#Make name Aqua
+		#Set name to Aqua
 		file.write("my name is Aqua.")
