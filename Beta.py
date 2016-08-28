@@ -46,17 +46,16 @@ if filecheck == 1:
 			#set the answer to zero
 			answer=0
 			#Get audio
+			speak("How may I help you, %s?" %username)
 			r = sr.Recognizer()
 			with sr.Microphone() as source:
-    				speak("How may I help you, %s?" %username)
 				audio = r.listen(source)
 			#Speech Recognition
 			try:
 				command=r.recognize_google(audio)
 			except sr.UnknownValueError:
-				with sr.Microphone as source:
-					speak("Please try agian, I didn't understand.")
-					audio=r.listen(source)
+				speak("Please try agian, I didn't understand.")
+				continue
 				
 			#Set basic commands
 			#Make command lowercase
