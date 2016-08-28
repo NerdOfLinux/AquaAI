@@ -45,8 +45,6 @@ if filecheck == 1:
 		print("Please use correct grammar(ex: end a question with a question mark!)")
 		#Begin a loop
 		while True:
-		
-			
 			#set the answer to zero
 			answer=0
 			print("Welcome %s, how may I help you?" %username)
@@ -176,10 +174,17 @@ else:
 	#Generate AI favorites
 	with open ('AI.dat', 'w') as file:
 	#Write to AI.dat
+		#Make favorite color
 		file.write("my favorite color is %s. \n" %random.choice(colors))
+		#Generate favorite number
 		file.write("my favorite number is %s. \n" %random.randint(0,999))
+		#Birthday is the original date of when AquaAI was started
 		file.write("my birthday is on July 19th. \n")
+		#Generate favorite food
 		file.write("my favorite food is %s. \n" %random.choice(food))
+		#Make favorite OS equal to current OS
 		file.write("my favorite os is %s. \n" %OSCheck)
+		#Generate favorite letter
 		file.write("my favorite letter is %s. \n" %random.choice(letter) )
+		#Make name Aqua
 		file.write("my name is Aqua.")
