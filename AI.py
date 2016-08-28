@@ -16,7 +16,7 @@ elif OSCheck == "darwin":
 	OSCheck = "Mac"
 #linux2 is Linux
 elif OSCheck == "linux2":
-	OSCheck == "Linux"
+	OSCheck = "Linux"
 #Make function speak to make speaking faster
 def speak( str ):
 	#If the OS is mac, use the speak command
