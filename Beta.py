@@ -29,9 +29,9 @@ def speak( speech ):
 def question( audio ):
 	audio=audio.split()
 	if audio[0] == "my":
-		is_question=0
+		return is_question=0
 	elif audio[0] == "what" or audio[0] == "when":
-		is_question=1
+		return is_question=1
 #If the file exists, ask for a username
 if filecheck == 1:
 	with open('users.dat', 'r') as file:
