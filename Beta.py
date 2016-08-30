@@ -56,9 +56,9 @@ if filecheck == 1:
 			#Get audio
 			speak("How may I help you, %s?" %username)
 			r = sr.Recognizer()
-			try:
-				with sr.Microphone() as source:
-					audio = r.listen(source)
+			
+			with sr.Microphone() as source:
+				audio = r.listen(source)
 			#Speech Recognition
 			try:
 				command=r.recognize_sphinx(audio)
