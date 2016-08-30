@@ -46,11 +46,11 @@ if filecheck == 1:
 	username=username.lower()
 	#If the user is in AI.dat and has their own file
 	if username in contents and os.path.isfile("%s.dat" %username):
-		#Open the commands file
-		file=open('%s.dat' %username, 'a')
 		print("Please use correct grammar(ex: end a question with a question mark!)")
 		#Begin a loop
 		while True:
+			#Open the commands file
+			file=open('%s.dat' %username, 'a')
 			#set the answer to zero
 			answer=0
 			#Get audio
@@ -96,10 +96,12 @@ if filecheck == 1:
 			if is_question == "0" and "my" in command:
 				file.write(command.lower())
 				file.write("\n")
+				file.close()
 			#If there is a question mark in the command
 			elif  is_question == "1" and "my" in command:
 				#Open the file as read only
 				readfile=open('%s.dat' %username, 'r')
+				file.close()
 				#Set it to all lowercase
 				query=command
 				#Spilt the string after the word is
