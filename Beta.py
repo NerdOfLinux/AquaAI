@@ -52,7 +52,7 @@ if filecheck == 1:
 				audio = r.listen(source)
 			#Speech Recognition
 			try:
-				command=r.recognize_google(audio)
+				command=r.recognize_sphinx(audio)
 				print(command)
 			except sr.UnknownValueError:
 				speak("Please try agian, I didn't understand.")
