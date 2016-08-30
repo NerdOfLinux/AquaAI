@@ -29,9 +29,9 @@ def speak( speech ):
 def question( audio ):
 	audio=audio.split()
 	if audio[0] == "my":
-		global is_question=0
+		global is_question="0"
 	elif audio[0] == "what" or audio[0] == "when":
-		global is_question=1
+		global is_question="1"
 	return
 #If the file exists, ask for a username
 if filecheck == 1:
@@ -92,11 +92,11 @@ if filecheck == 1:
 			#Check if command is a question or statement
 			question(command)
 			#If a period is in the command, save it to a file
-			if is_question == 0 and "my" in command:
+			if is_question == "0" and "my" in command:
 				file.write(command.lower())
 				file.write("\n")
 			#If there is a question mark in the command
-			elif  is_question == 1 and "my" in command:
+			elif  is_question == "1" and "my" in command:
 				#Open the file as read only
 				readfile=open('%s.dat' %username, 'r')
 				#Set it to all lowercase
@@ -125,7 +125,7 @@ if filecheck == 1:
 					#Return the answer to the user
 					speak("Your %s is%s" %(query, answer))
 			#If there is a question mark in the command
-			elif "?" in command and "your" in command:
+			elif is_question == "1" and "your" in command:
 				#Open the file as read only
 				readfile=open('AI.dat', 'r')
 				#Set it to all lowercase
