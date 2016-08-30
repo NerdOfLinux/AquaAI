@@ -25,7 +25,13 @@ def speak( speech ):
 	#If the OS is Linux, use espeak
 	elif OSCheck == "Linux":
 		os.system("echo %s | espeak" %speech)
-	return
+#Make function to determine if input is a question or statement
+def question( audio ):
+	audio=audio.split()
+	if audio[0] == "my":
+		is_question=0
+	elif audio[0] == "what" or audio[0] == "when":
+		is_question=1
 #If the file exists, ask for a username
 if filecheck == 1:
 	with open('users.dat', 'r') as file:
@@ -82,13 +88,14 @@ if filecheck == 1:
 				#If the OS is not Windows, it is probably Mac or Linux
 				else:
 					os.system("clear")
-				
+			#Check if command is a question or statement
+			question(command)
 			#If a period is in the command, save it to a file
-			if "." in command and "my" in command:
+			if is_question == 0 and "my" in command:
 				file.write(command.lower())
 				file.write("\n")
 			#If there is a question mark in the command
-			elif "?" in command and "my" in command:
+			elif  is_question == 1 and "my" in command:
 				#Open the file as read only
 				readfile=open('%s.dat' %username, 'r')
 				#Set it to all lowercase
