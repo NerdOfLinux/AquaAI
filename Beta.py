@@ -27,11 +27,12 @@ def speak( speech ):
 		os.system("echo %s | espeak" %speech)
 #Make function to determine if input is a question or statement
 def question( audio ):
+	global is_question
 	audio=audio.split()
 	if audio[0] == "my":
-		global is_question="0"
+		is_question="0"
 	elif audio[0] == "what" or audio[0] == "when":
-		global is_question="1"
+		is_question="1"
 	return
 #If the file exists, ask for a username
 if filecheck == 1:
