@@ -61,11 +61,11 @@ if filecheck == 1:
 				audio = r.listen(source)
 			#Speech Recognition
 			try:
-				command=r.recognize_sphinx(audio)
+				command=r.recognize_google(audio)
 				print(command)
-			except sr.UnknownValueError:
-				speak("Please try agian, I didn't understand.")
-				continue
+			except:
+				speak("Please try agian.")
+				command=r.recognize_sphinx(audio)
 				
 			#Set basic commands
 			#Make command lowercase

@@ -45,6 +45,8 @@ if filecheck == 1:
 		print("Please use correct grammar(ex: end a question with a question mark!)")
 		#Begin a loop
 		while True:
+			#Open the commands file
+			file=open('%s.dat' %username, 'a')
 			#set the answer to zero
 			answer=0
 			print("Welcome %s, how may I help you?" %username)
