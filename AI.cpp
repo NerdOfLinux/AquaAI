@@ -7,7 +7,7 @@ using namespace std;
 int main() {
   string name;
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
-  getline(cin, name)
+  getline(cin, name);
   cout << "Welcome, " << name << "." << endl;
   return 0;
 }
