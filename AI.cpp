@@ -6,7 +6,7 @@ using namespace std;
 int checkusr() {
   string usr;
   cout << "Enter name now: ";
-  getline(cin, name);
+  getline(cin, usr);
   
 }
 int main() {
