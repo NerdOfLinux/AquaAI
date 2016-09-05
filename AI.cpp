@@ -2,5 +2,5 @@
 using namespace std;
 
 int main() {
-  cout << "Hello, Welcome to Aqua-AI";
+  cout << "Hello, Welcome to Aqua-AI \n";
 }
