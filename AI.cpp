@@ -3,7 +3,10 @@
 #include <string>
 #include <fstream>
 using namespace std;
-
+int checkusr() {
+  
+  
+}
 int main() {
   string name;
   ofstream file;
