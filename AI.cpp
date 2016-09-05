@@ -4,7 +4,9 @@
 #include <fstream>
 using namespace std;
 int checkusr() {
-  
+  string usr;
+  cout << "Enter name now: ";
+  getline(cin, name);
   
 }
 int main() {
