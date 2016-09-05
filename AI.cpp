@@ -12,6 +12,6 @@ int main() {
   cout << "Welcome, " << name << "." << endl;
   file.open("AI.dat");
   file << name << "\n";
-  file.close;
+  file.close();
   return 0;
 }
