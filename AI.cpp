@@ -10,7 +10,8 @@ using namespace std;
   getline(cin, name);
   cout << "Welcome, " << name << "." << endl;
   file.open("AI.dat");
-  file << name << "\n";
+  file << name;
+  file << "\n";
   file.close();
   return 0;
 }
