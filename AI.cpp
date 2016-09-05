@@ -3,7 +3,7 @@
 #include <string>
 #include <fstream>
 using namespace std;
-int checkusr() {
+int checkusr(void) {
   string usr;
   cout << "Enter name now: ";
   getline(cin, usr);
