@@ -11,7 +11,7 @@ int main() {
   string name;
   ofstream file;
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
-  getline(cin, name)
+  getline(cin, name);
   cout << "Welcome, " << name << "." << endl;
   file.open("AI.dat");
   file << name << "\n";
