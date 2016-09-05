@@ -8,7 +8,6 @@ int main() {
   string name;
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   cin >> name;
-  cout << endl;
   cout << "Welcome, " << name << "." << endl;
   
 }
