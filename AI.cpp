@@ -6,8 +6,12 @@ using namespace std;
 
 int main() {
   string name;
+  ofstream file;
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
-  getline(cin, name);
+  cin >> name;
   cout << "Welcome, " << name << "." << endl;
-  return 0;
+  file.open("AI.dat")
+  myfile << name << "\n";
+  file.close;
+  return 0
 }
