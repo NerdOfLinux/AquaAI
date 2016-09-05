@@ -10,7 +10,7 @@ int main() {
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   cin >> name;
   cout << "Welcome, " << name << "." << endl;
-  file.open("AI.dat")
+  file.open("AI.dat");
   myfile << name << "\n";
   file.close;
   return 0
