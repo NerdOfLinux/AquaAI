@@ -12,7 +12,7 @@ int main() {
   
   
   
-  
+}
   
   string name;
   ofstream file;
