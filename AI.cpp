@@ -13,5 +13,5 @@ int main() {
   file.open("AI.dat");
   myfile << name << "\n";
   file.close;
-  return 0
+  return 0;
 }
