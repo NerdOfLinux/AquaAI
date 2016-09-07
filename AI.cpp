@@ -54,7 +54,7 @@ int addUser(string name);
     
   }
   
-//Funtion createUser
+//Funtion addUser
   int addUser(string name){
   //Declare what file is
   ofstream file;
