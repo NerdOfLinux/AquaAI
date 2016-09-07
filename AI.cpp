@@ -4,6 +4,10 @@
 #include <fstream>
 using namespace std;
   int main() {
+  createUser()
+}
+
+  int createUser(){
   string name;
   ofstream file;
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
@@ -14,4 +18,4 @@ using namespace std;
   file << "\n";
   file.close();
   return 0;
-}
+  }
