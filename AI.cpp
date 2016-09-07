@@ -9,6 +9,10 @@ int createUser(string name);
 int addUser(string name);
 //Main function
   int main() {
+  bool fexists(const char *filename) {
+  ifstream ifile(filename);
+  return ifile;
+  }
   int isFile;
   //Make name a string
   string name;
@@ -16,8 +20,7 @@ int addUser(string name);
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
   //If the file exists then add a user, else make a new file
-  isFile=isFile("AI.dat");
-  if (isFile == 1){
+  if (ifile == 1){
     addUser(name);
   }
   else {
@@ -39,19 +42,6 @@ int addUser(string name);
   cout << "Welcome, " << name << "." << endl;
   //End
   return 0;
-  }
-//Function isFile
-  int isFile(string isfile) {
-    ifstream ifile(isfile);
-    //If the file exists return 1
-    if (ifile) {
-     return 1;
-    }
-    //Else return 0
-    else {
-      return 0;
-    }
-    
   }
   
 //Funtion addUser
