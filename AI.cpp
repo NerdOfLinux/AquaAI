@@ -6,7 +6,7 @@ using namespace std;
 //Declare funtions
 int isFile(string isfile);
 int createUser(string name);
-int addUser(string name)
+int addUser(string name);
 //Main function
   int main() {
   bool isFile;
