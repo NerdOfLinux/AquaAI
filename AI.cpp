@@ -8,8 +8,7 @@ int createUser(string name);
   string name;
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
-  output=createUser(name);
-  cout << output << endl;
+  createUser(name);
 }
 
   int createUser(string name){
