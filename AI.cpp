@@ -42,8 +42,9 @@ int addUser(string name);
   }
 //Function isFile
   int isFile(string isfile) {
+    ifstream ifile(isfile);
     //If the file exists return 1
-    if (ifstream(isfile)) {
+    if (ifile) {
      return 1;
     }
     //Else return 0
