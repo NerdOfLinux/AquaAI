@@ -7,7 +7,7 @@ using namespace std;
 int isFile(string isfile);
 int createUser(string name);
 int addUser(string name);
-bool fexists(const char *filename) {
+bool fexists(const char *filename, string filename) {
   ifstream ifile(filename);
   return ifile;
 }
@@ -20,7 +20,7 @@ bool fexists(const char *filename) {
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
   //If the file exists then add a user, else make a new file
-  if (fexists == 1){
+  if (fexists("AI.dat)){
     addUser(name);
   }
   else {
