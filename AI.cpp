@@ -16,7 +16,7 @@ int addUser(string name);
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
   //If the file exists then add a user, else make a new file
-  isFile=isfile("AI.dat");
+  isFile=isFile("AI.dat");
   if (isFile == 1){
     addUser(name);
   }
