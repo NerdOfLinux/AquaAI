@@ -8,7 +8,7 @@ int isFile(string isfile);
 int createUser(string name);
 int addUser(string name);
 bool userFile(const char *filename) {
-  ifstream ifile("AI.dat");
+  ifstream ifile("users.dat");
   return ifile;
 }
 //Main function
@@ -20,7 +20,7 @@ bool userFile(const char *filename) {
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
   //If the file exists then add a user, else make a new file
-  if (userFile("AI.dat")){
+  if (userFile("users.dat")){
     addUser(name);
   }
   else {
@@ -32,7 +32,7 @@ bool userFile(const char *filename) {
   //Declare what file is
   ofstream file;
   //Make a file
-  file.open("AI.dat");
+  file.open("users.dat");
   //Put the name in the file
   file << name;
   //Add a newline
@@ -49,7 +49,7 @@ bool userFile(const char *filename) {
   //Declare what file is
   ofstream file;
   //Make a file
-  file.open("AI.dat", ios_base::app);
+  file.open("users.dat", ios_base::app);
   //Put the name in the file
   file << name;
   //Add a newline
