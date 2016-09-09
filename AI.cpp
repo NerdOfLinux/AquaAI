@@ -9,7 +9,7 @@ int addUser(string name);
 bool userFile(const char *filename);
 //Main function
   int main() {
-  int isFile;
+  //int isFile; unused variable
   //Make name a string
   string name;
   //Get name from user
