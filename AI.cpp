@@ -27,7 +27,9 @@ bool userFile(const char *filename);
   int createUser(string name){
   //Declare what file is
   ofstream file;
+  ofstream fileAI;
   //Make a file
+  fileAI.open("AI.dat");
   file.open("users.dat");
   //Put the name in the file
   file << name;
@@ -35,6 +37,7 @@ bool userFile(const char *filename);
   file << "\n";
   //Close the file
   file.close();
+  fileAI.close();
   cout << "Welcome, " << name << "." << endl;
   //End
   return 0;
