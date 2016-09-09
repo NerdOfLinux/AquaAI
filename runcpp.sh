@@ -1,4 +1,4 @@
 #Run C++ AI
-g++ $1
+g++ AI.cpp
 ./a.out
-rm a.out
+
