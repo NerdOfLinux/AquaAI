@@ -60,10 +60,6 @@ bool userFile(const char *filename);
   cout << "Welcome, " << name << "." << endl;
   return 0;
   }
-//Check if file exists
-bool userFile(const char *filename) {
-  ifstream ifile(filename);
-  return ifile;
   char contin;
     //Ask if the user would like to continue
   cout << "Would you like to continue to our cpp AI? y/n?";
@@ -78,3 +74,10 @@ else
     cout << "return test";
   }
 }
+  
+  
+  
+//Check if file exists
+bool userFile(const char *filename) {
+  ifstream ifile(filename);
+  return ifile;
