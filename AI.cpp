@@ -25,7 +25,7 @@ bool userFile(const char *filename);
     addUser(name);
   }
   else {
-    
+    createUser(name);
   }
 }
 //Funtion createUser
