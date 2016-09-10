@@ -6,7 +6,7 @@ using namespace std;
 //Declare funtions
 int createUser(string name);
 int addUser(string name);
-bool userFile(const char *filename);
+bool fexists(const char *filename);
 //Main function
   int main() {
   //int isFile; unused variable
@@ -77,7 +77,7 @@ bool userFile(const char *filename);
   }
 
 //Check if file exists
-bool userFile(const char *filename) {
+bool fexists(const char *filename) {
   ifstream ifile(filename);
   return ifile;
 }
