@@ -63,11 +63,9 @@ bool userFile(const char *filename);
   }
   int currentUser(string name) {
   //Declare file
-  ofstream file;
-  //open file
-  file.open("users.dat", ios::out);
-  file >> name;
-  file.close()
+  ifstream inFile;
+  inFile.open("users.dat")
+  inFile >>
   }
 //Check if file exists
 bool userFile(const char *filename) {
