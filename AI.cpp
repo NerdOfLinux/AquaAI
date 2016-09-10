@@ -78,6 +78,5 @@ else
   {
     cout << "return test";
   }
-  return 0;
 }
 
