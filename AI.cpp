@@ -56,6 +56,21 @@ bool userFile(const char *filename);
   //Close the file
   file.close();
   cout << "Welcome, " << name << "." << endl;
+  //Ask if the user would like to continue
+  cout << "Would you like to continue to our cpp AI? y/n?";
+  //Declare string cont; (Short for continue)
+  string cont;
+  getline(cin, cont);
+if (cont == 'y')
+  {
+    cout << "Okay, welcome to the Aqua-AI!";"
+    
+  }
+else
+  {
+    
+    return 0;
+  }
   //End
   return 0;
   }
