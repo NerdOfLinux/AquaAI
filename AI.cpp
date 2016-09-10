@@ -63,7 +63,7 @@ bool userFile(const char *filename);
   getline(cin, cont);
 if (cont == 'y')
   {
-    cout << "Okay, welcome to the Aqua-AI!";"
+    cout << "Okay, welcome to the Aqua-AI!";
     
   }
 else
