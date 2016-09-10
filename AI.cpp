@@ -6,76 +6,45 @@ using namespace std;
 //Declare funtions
 int createUser(string name);
 int addUser(string name);
-bool userFile(const char *filename);
+bool fexists(const char *filename);
 //Main function
   int main() {
   //int isFile; unused variable
   //Make string name
   string name;
-  //Make string contin
-  string contin;
+  string userfile;
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
   //If the file exists then add a user, else make a new file with the user
-  if (userFile("users.dat")){
-    addUser(name);
+  userfile=name;
+   if (fexists(userfile.append(".dat").c_str())){
+      cout << "Welcome back, " << name << "." << endl;
+    }
+    else {
+      createUser(name);
+   }
   }
-  else {
-    createUser(name);
-  }
-}
 //Funtion createUser
   int createUser(string name){
+  cout << "Creating user..." << endl;
   //Declare what file is
-  ofstream file;
-  ofstream fileAI;
+  string namefile;
+  ofstream userfile;
   //Make a file
-  fileAI.open("AI.dat");
-  file.open("users.dat");
-  //Put the name in the file
-  file << name;
-  //Add a newline
-  file << "\n";
+  cout << "Creating user files..." << endl;
+  namefile=name;
+  userfile.open(namefile.append(".dat").c_str());
   //Close the file
-  file.close();
-  fileAI.close();
-  cout << "Welcome, " << name << "." << endl;
+  userfile.close();
+  cout << "User " << name << " has been created." << endl;
   //End
   return 0;
   }
   
-//Funtion addUser
-  int addUser(string name){
-  //Declare what file is
-  ofstream file;
-  //Make a file
-  file.open("users.dat", ios_base::app);
-  //Put the name in the file
-  file << name;
-  //Add a newline
-  file << "\n";
-  //Close the file
-  file.close();
-  cout << "Welcome, " << name << "." << endl;
-  //Ask if the user would like to continue
-  cout << "Would you like to continue to our cpp AI? y/n?";
-  getline(cin, contin);
-if (contin == 'y')
-  {
-    cout << "Okay, welcome to the Aqua-AI!";
-    
-  }
-else
-  {
-    cout << "return test";
-    return 0;
-  }
-  //End
-  return 0;
-  }
+
 //Check if file exists
-bool userFile(const char *filename) {
+bool fexists(const char *filename) {
   ifstream ifile(filename);
   return ifile;
 }
