@@ -6,7 +6,6 @@ using namespace std;
 //Declare funtions
 int createUser(string name);
 int addUser(string name);
-int currentUser(string name);
 bool userFile(const char *filename);
 //Main function
   int main() {
@@ -60,18 +59,8 @@ bool userFile(const char *filename);
 
   cout << "Welcome, " << name << "." << endl;
   return 0;
-  }
-  int currentUser(string name) {
-  //Declare file
 
-ifstream file("filename.txt");
-string content;
 
-while(file >> content) {
-cout << content << ' ';
-}
-return 0;
-}
   }
 //Check if file exists
 bool userFile(const char *filename) {
