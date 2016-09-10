@@ -60,7 +60,7 @@ bool userFile(const char *filename);
   cout << "Welcome, " << name << "." << endl;
   //Ask if the user would like to continue
   cout << "Would you like to continue to our cpp AI? y/n?";
-  getline(cin, contin)
+  getline(cin, contin);
 if (contin == 'y')
   {
     cout << "Okay, welcome to the Aqua-AI!";
