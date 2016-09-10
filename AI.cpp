@@ -58,20 +58,6 @@ bool userFile(const char *filename);
   file.close();
 
   cout << "Welcome, " << name << "." << endl;
-  //Ask if the user would like to continue
-  cout << "Would you like to continue to our cpp AI? y/n?";
-  cin >> contin;
-if (contin == 'y')
-  {
-    cout << "Okay, welcome to the Aqua-AI!";
-    
-  }
-else
-  {
-    cout << "return test";
-    return 0;
-  }
-  //End
   return 0;
   }
 //Check if file exists
