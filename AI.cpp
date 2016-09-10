@@ -12,6 +12,7 @@ bool userFile(const char *filename);
   //int isFile; unused variable
   //Make string name
   string name;
+  char contin;
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
@@ -55,7 +56,7 @@ bool userFile(const char *filename);
   file << "\n";
   //Close the file
   file.close();
-  string contin;
+
   cout << "Welcome, " << name << "." << endl;
   //Ask if the user would like to continue
   cout << "Would you like to continue to our cpp AI? y/n?";
