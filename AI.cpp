@@ -64,7 +64,7 @@ bool userFile(const char *filename);
 bool userFile(const char *filename) {
   ifstream ifile(filename);
   return ifile;
-  
+  char contin;
     //Ask if the user would like to continue
   cout << "Would you like to continue to our cpp AI? y/n?";
   cin >> contin;
@@ -77,3 +77,4 @@ else
   {
     cout << "return test";
   }
+}
