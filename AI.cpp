@@ -64,4 +64,16 @@ bool userFile(const char *filename);
 bool userFile(const char *filename) {
   ifstream ifile(filename);
   return ifile;
-}
+  
+    //Ask if the user would like to continue
+  cout << "Would you like to continue to our cpp AI? y/n?";
+  cin >> contin;
+if (contin == 'y')
+  {
+    cout << "Okay, welcome to the Aqua-AI!";
+    
+  }
+else
+  {
+    cout << "return test";
+  }
