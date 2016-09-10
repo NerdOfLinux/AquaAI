@@ -19,15 +19,15 @@ bool userFile(const char *filename);
   getline(cin, name);
   //If the file exists then add a user, else make a new file
   if (fexists("users.dat") == false){
-    createUser(name);
   //If the file exists then add a user, else make a new file with the user
-  if (userFile("users.dat")){
-    addUser(name);
+   if (userFile("users.dat")){
+      addUser(name);
+    }
+    else {
+      createUser(name);
+   }
   }
-  else {
-    createUser(name);
   }
-}
 //Funtion createUser
   int createUser(string name){
   //Declare what file is
