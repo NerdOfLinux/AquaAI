@@ -63,9 +63,15 @@ bool userFile(const char *filename);
   }
   int currentUser(string name) {
   //Declare file
-  ifstream inFile;
-  inFile.open("users.dat");
-  inFile >>
+
+ifstream file("filename.txt");
+string content;
+
+while(file >> content) {
+cout << content << ' ';
+}
+return 0;
+}
   }
 //Check if file exists
 bool userFile(const char *filename) {
