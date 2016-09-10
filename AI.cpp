@@ -72,7 +72,7 @@ bool userFile(const char *filename);
 	        cout<<STRING; // Prints our STRING.
         }
 	infile.close();
-	system ("pause");
+	//system ("pause");
   }
 //Check if file exists
 bool userFile(const char *filename) {
