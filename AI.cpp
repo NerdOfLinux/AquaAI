@@ -64,3 +64,4 @@ bool userFile(const char *filename);
 bool userFile(const char *filename) {
   ifstream ifile(filename);
   return ifile;
+}
