@@ -6,7 +6,6 @@ using namespace std;
 //Declare funtions
 int createUser(string name);
 int addUser(string name);
-bool fexists(const char *filename);
 bool userFile(const char *filename);
 //Main function
   int main() {
