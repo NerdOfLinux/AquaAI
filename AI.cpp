@@ -62,17 +62,12 @@ bool userFile(const char *filename);
   return 0;
   }
   int currentUser(string name) {
-    
-        string STRING;
-	ifstream infile;
-	infile.open ("names.txt");
-        while(!infile.eof) // To get you all the lines.
-        {
-	        getline(infile,STRING); // Saves the line in STRING.
-	        cout<<STRING; // Prints our STRING.
-        }
-	infile.close();
-	//system ("pause");
+  //Declare file
+  ofstream file;
+  //open file
+  file.open("users.dat", ios::out);
+  file >> name;
+  file.close()
   }
 //Check if file exists
 bool userFile(const char *filename) {
