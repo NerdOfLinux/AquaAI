@@ -16,16 +16,13 @@ bool fexists(const char *filename);
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
-  //If the file exists then add a user, else make a new file
-  if (fexists("users.dat") == false){
   //If the file exists then add a user, else make a new file with the user
-   if (userFile("users.dat")){
+   if (fexists("users.dat")){
       addUser(name);
     }
     else {
       createUser(name);
    }
-  }
   }
 //Funtion createUser
   int createUser(string name){
