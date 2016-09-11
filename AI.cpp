@@ -34,9 +34,7 @@ bool fexists(const char *filename);
   file.open("users.dat");
   namefile=name;
   userfile.open(namefile.append(".dat").c_str());
-  ofstream fileAI;
   //Make a file
-  fileAI.open("AI.dat");
   file.open("users.dat");
   //Put the name in the file
   file << name;
@@ -45,7 +43,6 @@ bool fexists(const char *filename);
   //Close the file
   file.close();
   userfile.close();
-  fileAI.close();
   cout << "Welcome, " << name << "." << endl;
   //End
   return 0;
