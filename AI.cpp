@@ -27,10 +27,12 @@ bool fexists(const char *filename);
   }
 //Funtion createUser
   int createUser(string name){
+  cout << "Creating user..." << endl;
   //Declare what file is
   string namefile;
   ofstream userfile;
   //Make a file
+  cout << "Creating user files..." << endl;
   namefile=name;
   userfile.open(namefile.append(".dat").c_str());
   //Close the file
