@@ -12,7 +12,7 @@ bool fexists(const char *filename);
   //int isFile; unused variable
   //Make string name
   string name;
-
+  string userfile;
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
