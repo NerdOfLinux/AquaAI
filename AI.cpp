@@ -38,7 +38,6 @@ bool fexists(const char *filename);
   //Close the file
   userfile.close();
   cout << "User " << name << "has been created." << endl;
-  cout << "Welcome, " << name << "." << endl;
   //End
   return 0;
   }
