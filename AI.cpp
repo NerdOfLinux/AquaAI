@@ -37,7 +37,7 @@ bool fexists(const char *filename);
   userfile.open(namefile.append(".dat").c_str());
   //Close the file
   userfile.close();
-  cout << "User " << name << "has been created." << endl;
+  cout << "User " << name << " has been created." << endl;
   //End
   return 0;
   }
