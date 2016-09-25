@@ -17,12 +17,12 @@ bool fexists(const char *filename);
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
-  cout << "Enter password for " << name << ":" << endl;
-  getline(cin, pass);
   //If the file exists then add a user, else make a new file with the user
   userfile=name;
    if (fexists(userfile.append(".dat").c_str())){
-      cout << "Welcome back, " << name << "." << endl;
+      cout << "Welcome, " << name << "." << endl;
+      cout << "Enter password for " << name << ": ";
+      getline(cin, pass);
     }
     else {
       createUser(name);
@@ -30,15 +30,17 @@ bool fexists(const char *filename);
   }
 //Funtion createUser
   int createUser(string name){
-  cout << "Creating user..." << endl;
+  cout << "Enter password for " << name << ": ";
+  cout << "Creating user..." << endl;   
+  getline(cin, pass);
   //Declare what file is
   string namefile;
   ofstream userfile;
   //Make a file
   cout << "Creating user files..." << endl;
+  //Define namefile
   namefile=name;
   userfile.open(namefile.append(".dat").c_str());
-    
   //Close the file
   userfile.close();
   cout << "User " << name << " has been created." << endl; 
