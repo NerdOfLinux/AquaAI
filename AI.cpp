@@ -30,6 +30,7 @@ bool fexists(const char *filename);
   }
 //Funtion createUser
   int createUser(string name){
+  string pass;
   cout << "Enter password for " << name << ": ";
   cout << "Creating user..." << endl;   
   getline(cin, pass);
