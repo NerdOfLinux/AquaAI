@@ -32,8 +32,8 @@ bool fexists(const char *filename);
   int createUser(string name){
   string pass;
   cout << "Enter password for " << name << ": ";
-  cout << "Creating user..." << endl;   
   getline(cin, pass);
+  cout << "Creating user..." << endl;   
   //Declare what file is
   string namefile;
   ofstream userfile;
@@ -45,6 +45,7 @@ bool fexists(const char *filename);
   //Close the file
   userfile.close();
   cout << "User " << name << " has been created." << endl; 
+  cout << "Run this program again to log in." << endl;
   //End
   return 0;
   }
