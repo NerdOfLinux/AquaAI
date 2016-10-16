@@ -63,6 +63,7 @@ int search(string searchTerm) {
     system("search2=$(echo $searchTerm | sed 's/ /%20/g'); x-www-browser https://www.google.com/#q=$search2");
   } else {
     cout << "goodbye" << endl;
+    return 0;
   }
 
 
