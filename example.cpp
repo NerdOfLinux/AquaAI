@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 string search;
-cout << "Would you like to search that on google?" << endl;
+cout << "Would you like to search that on your browser?" << endl;
 getline(cin, search);
 
 if ( search == "yes" ) {
