@@ -15,7 +15,6 @@ int search(string searchTerm);
   //Make string name
   string name;
   string userfile;
-  string pass;
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
@@ -23,8 +22,9 @@ int search(string searchTerm);
   userfile=name;
    if (fexists(userfile.append(".dat").c_str())){
       cout << "Welcome, " << name << "." << endl;
-      cout << "Enter password for " << name << ": ";
-      getline(cin, pass);
+      cout << "Enter item to search: " << endl;
+      getline(cin, searchItem);
+      search(searchItem)
     }
     else {
       createUser(name);
@@ -32,12 +32,6 @@ int search(string searchTerm);
   }
 //Funtion createUser
   int createUser(string name){
-  //Create string pass
-  string pass;
-  //Ask for password
-  cout << "Enter password for " << name << ": ";
-  //Store password in string
-  getline(cin, pass);
   cout << "Creating user..." << endl;   
   //Declare what file is
   string namefile;
