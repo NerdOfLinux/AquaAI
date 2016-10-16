@@ -23,7 +23,7 @@ int search(string searchTerm);
   userfile=name;
    if (fexists(userfile.append(".dat").c_str())){
       cout << "Welcome, " << name << "." << endl;
-      cout << "Enter item to search: " << endl;
+      cout << "Enter item to search: ";
       getline(cin, searchItem);
       search(searchItem);
     }
