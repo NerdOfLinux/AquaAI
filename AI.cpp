@@ -8,7 +8,7 @@ using namespace std;
 int createUser(string name);
 int addUser(string name);
 bool fexists(const char *filename);
-int search(string search);
+int search(string searchTerm);
 //Main function
   int main() {
   //int isFile; unused variable
@@ -64,7 +64,7 @@ int search {
   cout << "Would you like to search that on your browser?" << endl;
   getline(cin, searchyesno);
   if ( searchyesno == "yes" ) {
-    system("search2=$(echo $search | sed 's/ /%20/g'); x-www-browser https://www.google.com/#q=$search2");
+    system("search2=$(echo $searchTerm | sed 's/ /%20/g'); x-www-browser https://www.google.com/#q=$search2");
   } else {
     cout << "goodbye" << endl;
   }
