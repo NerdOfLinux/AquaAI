@@ -62,6 +62,7 @@ int search(string searchTerm) {
   if ( searchyesno == "yes" ) {
     //system("search2=$(echo $searchTerm | sed 's/ /%20/g'); x-www-browser https://www.google.com/#q=$search2");
     system("echo $searchTerm");
+    cout << searchTerm << endl;
   } else {
     cout << "goodbye" << endl;
     return 0;
