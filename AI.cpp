@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <cstdlib>
 using namespace std;
 //Declare funtions
 int createUser(string name);
@@ -52,8 +53,6 @@ bool fexists(const char *filename);
   //End
   return 0;
   }
-  
-
 //Check if file exists
 bool fexists(const char *filename) {
   ifstream ifile(filename);
