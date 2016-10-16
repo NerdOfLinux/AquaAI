@@ -24,8 +24,8 @@ int search(string searchTerm);
    if (fexists(userfile.append(".dat").c_str())){
       cout << "Welcome, " << name << "." << endl;
       cout << "Enter item to search: ";
-      getline(cin, searchItem);
-      search(searchItem);
+      getline(cin, searchTerm);
+      search(searchTerm);
     }
     else {
       createUser(name);
