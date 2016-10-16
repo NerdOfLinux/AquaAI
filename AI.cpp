@@ -25,7 +25,7 @@ int search(string searchTerm);
       cout << "Welcome, " << name << "." << endl;
       cout << "Enter item to search: " << endl;
       getline(cin, searchItem);
-      search(searchItem)
+      search(searchItem);
     }
     else {
       createUser(name);
