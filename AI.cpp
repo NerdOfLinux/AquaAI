@@ -15,6 +15,7 @@ int search(string searchTerm);
   //Make string name
   string name;
   string userfile;
+  string searchItem;
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
