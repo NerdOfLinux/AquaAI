@@ -55,7 +55,7 @@ bool fexists(const char *filename) {
   return ifile;
 }
 
-int search {
+int search(string searchTerm) {
   string searchyesno;
   cout << "Would you like to search that on your browser?" << endl;
   getline(cin, searchyesno);
