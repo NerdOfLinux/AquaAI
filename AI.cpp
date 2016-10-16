@@ -34,10 +34,7 @@ bool fexists(const char *filename);
   string pass;
   //Ask for password
   cout << "Enter password for " << name << ": ";
-<<<<<<< HEAD
-=======
   //Store password in string
->>>>>>> 4bba68098a9879dbb0353343afbafcd57291566c
   getline(cin, pass);
   cout << "Creating user..." << endl;   
   //Declare what file is
