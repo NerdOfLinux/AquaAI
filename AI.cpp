@@ -9,13 +9,13 @@ int createUser(string name);
 int addUser(string name);
 bool fexists(const char *filename);
 int search(string searchTerm);
+string searchTerm;
 //Main function
   int main() {
   //int isFile; unused variable
   //Make string name
   string name;
   string userfile;
-  string searchTerm;
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
