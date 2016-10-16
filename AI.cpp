@@ -56,6 +56,7 @@ bool fexists(const char *filename) {
 }
 
 int search(string searchTerm) {
+  string searchyesno;
   cout << "Would you like to search that on your browser?" << endl;
   getline(cin, searchyesno);
   if ( searchyesno == "yes" ) {
