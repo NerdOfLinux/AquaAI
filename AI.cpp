@@ -64,7 +64,7 @@ int search(string searchTerm) {
     bash="echo ";
     bash+=searchTerm;
     //system("search2=$(echo $searchTerm | sed 's/ /%20/g'); x-www-browser https://www.google.com/#q=$search2");
-    system(bash);
+    system(bash.c_str());
     cout << searchTerm << endl;
   } else {
     cout << "goodbye" << endl;
