@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ $(which espeak) ]
 then
 	clear
