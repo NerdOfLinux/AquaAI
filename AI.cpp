@@ -57,11 +57,14 @@ bool fexists(const char *filename) {
 
 int search(string searchTerm) {
   string searchyesno;
+  string bash;
   cout << "Would you like to search that on your browser?" << endl;
   getline(cin, searchyesno);
   if ( searchyesno == "yes" ) {
+    bash="echo ";
+    bash+=searchTerm;
     //system("search2=$(echo $searchTerm | sed 's/ /%20/g'); x-www-browser https://www.google.com/#q=$search2");
-    system("echo $?" + searchTerm + "");
+    system(bash);
     cout << searchTerm << endl;
   } else {
     cout << "goodbye" << endl;
