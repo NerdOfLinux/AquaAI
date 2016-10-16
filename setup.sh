@@ -2,7 +2,7 @@
 if [ $(which espeak) ]
 then
 	clear
-	make ; ./AI
+	make ; ./AI; rm a.out
 else
 	if [ $(whoami) = "root" ]
 	then
