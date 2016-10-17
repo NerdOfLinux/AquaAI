@@ -61,11 +61,10 @@ int search(string searchTerm) {
   cout << "Would you like to search that on your browser?" << endl;
   getline(cin, searchyesno);
   if ( searchyesno == "yes" ) {
-    bash="echo ";
+    bash="search2=$(echo ";
     bash+=searchTerm;
-    //system("search2=$(echo $searchTerm | sed 's/ /%20/g'); x-www-browser https://www.google.com/#q=$search2");
+    bash+=" | sed 's/ /%20/g'); x-www-browser https://www.google.com/#q=$search2";
     system(bash.c_str());
-    cout << searchTerm << endl;
   } else {
     cout << "goodbye" << endl;
     return 0;
