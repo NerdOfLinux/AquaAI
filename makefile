@@ -1,4 +1,4 @@
-AI: AI.cpp
-	g++ -o AI AI.cpp 
+Aqua: Aqua.cpp
+	g++ -o Aqua Aqua.cpp
 clean:
-	$(RM) AI
+	$(RM) Aqua
