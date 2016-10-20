@@ -1,4 +1,4 @@
-# Aqua
+# Aqua - A semi Desktop assistant
 If you are using python 3 run the AI3.py.
  Aqua is still in early Alpha stages (still being developed) and is not a true assistant yet.
  
