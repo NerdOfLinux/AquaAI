@@ -4,3 +4,8 @@ Requirements:
   PyAudio 0.2.9+ (required only if you need to use microphone input, Microphone)
   PocketSphinx (required only if you need to use the Sphinx recognizer, recognizer_instance.recognize_sphinx)
   FLAC encoder (required only if the system is not x86-based Windows/Linux/OS X)
+3.)  If using Linux please do sudo apt install espeak
+4.)  If you are using Linux please run the following commands to download a compiler for one of our user databases
+     sudo apt-add-repository ppa:swi-prolog/stable
+     sudo apt-get update
+     sudo apt-get install swi-prolog

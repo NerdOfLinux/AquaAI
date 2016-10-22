@@ -2,18 +2,20 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <cstdlib>
 using namespace std;
 //Declare funtions
 int createUser(string name);
 int addUser(string name);
 bool fexists(const char *filename);
+int search(string searchTerm);
+string searchTerm;
 //Main function
   int main() {
   //int isFile; unused variable
   //Make string name
   string name;
   string userfile;
-  string pass;
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
@@ -21,8 +23,9 @@ bool fexists(const char *filename);
   userfile=name;
    if (fexists(userfile.append(".dat").c_str())){
       cout << "Welcome, " << name << "." << endl;
-      cout << "Enter password for " << name << ": ";
-      getline(cin, pass);
+      cout << "Enter item to search: ";
+      getline(cin, searchTerm);
+      search(searchTerm);
     }
     else {
       createUser(name);
@@ -30,12 +33,6 @@ bool fexists(const char *filename);
   }
 //Funtion createUser
   int createUser(string name){
-  //Create string pass
-  string pass;
-  //Ask for password
-  cout << "Enter password for " << name << ": ";
-  //Store password in string
-  getline(cin, pass);
   cout << "Creating user..." << endl;   
   //Declare what file is
   string namefile;
@@ -52,10 +49,28 @@ bool fexists(const char *filename);
   //End
   return 0;
   }
-  
-
 //Check if file exists
 bool fexists(const char *filename) {
   ifstream ifile(filename);
   return ifile;
+}
+
+int search(string searchTerm) {
+  string searchyesno;
+  string bash;
+  cout << "Would you like to search that on your browser?" << endl;
+  getline(cin, searchyesno);
+  if ( searchyesno == "yes" ) {
+    bash="search2=$(echo ";
+    bash+=searchTerm;
+    bash+=" | sed 's/ /%20/g'); x-www-browser https://www.google.com/#q=$search2";
+    system(bash.c_str());
+  } else {
+    cout << "goodbye" << endl;
+    return 0;
+  }
+
+
+
+return 0;
 }
