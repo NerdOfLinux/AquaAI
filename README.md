@@ -4,7 +4,9 @@
 
 # <h2> Using Aqua on Linux: </h2> 
    mkdir Aqua ; cd Aqua <br>
+   
    git clone https://github.com/NerdOfLinux/AquaAI.git<br>  
+   
    cd Setup ; bash setup.sh
    
    
