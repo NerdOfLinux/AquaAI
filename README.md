@@ -3,8 +3,9 @@
 
 
 # <h2> Using Aqua on Linux: </h2> 
+   mkdir Aqua ; cd Aqua
    git clone https://github.com/NerdOfLinux/AquaAI.git<br>  
-   bash setup.sh
+   cd Setup ; bash setup.sh
    
    
 # <h2> Using Aqua on Windows: </h2>
