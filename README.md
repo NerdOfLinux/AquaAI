@@ -3,12 +3,12 @@ Aqua is still in early Alpha stages (still being developed) and is not a true as
 
 
 # <h2> Using Aqua on Linux: </h2> 
- <b> To run this program please type bash setup.sh (in terminal) if on linux or Mac. <br></b>
+    To run this program please type bash setup.sh (in terminal) if on linux or Mac. <br>
  
  
 # <h2> Using Aqua on Windows: </h2>
- <b> If you are on Windows please install a compiler (Recommended: Windows visual studio Community 2015)</b>
+    If you are on Windows please install a compiler (Recommended: Windows visual studio Community 2015)
  
  
- # News:
- <br><b> The Python Aqua version is no longer being actively developed, but is stable.</b>
+# <h2> News: </h2> <br>
+    The Python Aqua version is no longer being actively developed, but is stable.
