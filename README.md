@@ -1,5 +1,6 @@
 # <h1> Aqua - The open-source semi Desktop assistant </h1>
-   Aqua is still in early Alpha stages (still being developed) and is not a true assistant yet.
+   Aqua is in early Alpha stages and is still being developed.
+   Note: Aqua is not a true assistant yet.
 
 
 # <h2> Using Aqua on Linux: </h2> 
