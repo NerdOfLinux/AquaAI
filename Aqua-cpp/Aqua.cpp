@@ -55,15 +55,18 @@ bool fexists(const char *filename) {
   return ifile;
 }
 
+//Function to open browser with a custom search term
 int search(string searchTerm) {
   string searchyesno;
   string bash;
   cout << "Would you like to search that on your browser?" << endl;
   getline(cin, searchyesno);
+  //If user responds yes then
   if ( searchyesno == "yes" ) {
     bash="search2=$(echo ";
     bash+=searchTerm;
     bash+=" | sed 's/ /%20/g'); x-www-browser https://www.google.com/#q=$search2";
+    //Run a bash command to open a new browser window or tab with a search term
     system(bash.c_str());
   } else {
     cout << "goodbye" << endl;
