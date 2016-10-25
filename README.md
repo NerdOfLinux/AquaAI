@@ -8,9 +8,8 @@
    
    git clone https://github.com/NerdOfLinux/AquaAI.git<br>  
    
-   cd Setup ; bash setup.sh
-   
-   
+   cd Setup ; bash setup.sh   
+
 # <h2> Using Aqua on Windows: </h2>
    If you are on Windows please install a compiler (Recommended: Windows visual studio Community 2015)
  
