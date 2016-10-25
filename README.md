@@ -11,7 +11,7 @@
    cd Setup ; bash setup.sh   
 
 # <h2> Using Aqua on Windows: </h2>
-   If you are on Windows please install a adaquate C++ compiler, then run the Aqua.cpp File.
+   If you are on Windows please install and or use a adaquate C++ compiler, then run the Aqua.cpp File.
  
  
 # <h2> News: </h2> <br>
