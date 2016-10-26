@@ -15,4 +15,7 @@
  
  
 # <h2> News: </h2> <br>
-   The Python Aqua version is no longer being actively developed, as on 10/22/16.
+   The Python Aqua version (Aqua.py & Aqua3.py) is no longer being actively developed, as on 10/22/16.
+
+# <h2> Notes: </h2> <br>
+   If you are still planning on using the Python verson of Aqua please use Aqua3.py for Python3 and Aqua.py for Python2.7.12.
