@@ -1,3 +1,5 @@
+[![GitHub license]("https://img.shields.io/wercker/ci/wercker/docs.svg")
+
 # <h1> Aqua - The open-source semi Desktop assistant </h1>
    Aqua is in currently in Alpha stages and is still yet being developed.
    Note: Aqua is not a true assistant yet.
