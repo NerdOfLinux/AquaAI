@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ $(which espeak) ]
+if [ $(which espeak) ] && [ $(which swi-prolog) ]
 then
-	clear
+	cd ../Aqua-cpp
 	make ; ./Aqua; rm a.out
 else
 	if [ $(whoami) = "root" ]
