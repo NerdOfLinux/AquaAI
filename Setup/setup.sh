@@ -5,7 +5,7 @@ then
 	if [ $(which prolog) ]
 	then
 		cd ../Aqua-cpp
-		make ; ./Aqua; rm a.out
+		make ; ./Aqua
 	else
 		if [ $(whoami) = "root" ]
 		then
