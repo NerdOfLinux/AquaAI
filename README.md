@@ -2,6 +2,7 @@
 
 # <h1> Aqua - The open-source semi Desktop assistant </h1>
    Aqua is in currently in Alpha stages and is still yet being developed.
+   Aqua is currently only tested in Ubuntu, but should work with most debian based operating systems.
    Note: Aqua is not a true assistant yet.
 
 
