@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $(which espeak; which swi-prolog) ]
+if [ $(which espeak; which prolog) ]
 then
 	cd ../Aqua-cpp
 	make ; ./Aqua; rm a.out
