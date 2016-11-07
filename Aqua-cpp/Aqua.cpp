@@ -10,6 +10,7 @@ int addUser(string name);
 bool fexists(const char *filename);
 int search(string searchTerm);
 int learn(string newInfo);
+//Make a string called searchTerm
 string searchTerm;
 //Main function
   int main() {
@@ -25,6 +26,7 @@ string searchTerm;
    if (fexists(userfile.append(".dat").c_str())){
       cout << "Welcome, " << name << "." << endl;
       cout << "Enter item to search: ";
+      //Get search term
       getline(cin, searchTerm);
       search(searchTerm);
     }
@@ -58,6 +60,7 @@ bool fexists(const char *filename) {
 
 //Function to open browser with a custom search term
 int search(string searchTerm) {
+  //Make string called yesno and bash
   string searchyesno;
   string bash;
   cout << "Would you like to search that on your browser?: ";
@@ -76,6 +79,7 @@ int search(string searchTerm) {
 return 0;
 }
 
+//Make function learn
 int learn(string newInfo) {
   cout << "Test" << endl;
 }
