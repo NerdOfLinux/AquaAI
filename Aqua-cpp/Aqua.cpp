@@ -9,6 +9,7 @@ int createUser(string name);
 int addUser(string name);
 bool fexists(const char *filename);
 int search(string searchTerm);
+int learn(string newInfo);
 string searchTerm;
 //Main function
   int main() {
@@ -72,8 +73,9 @@ int search(string searchTerm) {
     cout << "goodbye" << endl;
     return 0;
   }
-
-
-
 return 0;
+}
+
+int learn(string newInfo) {
+  cout << "Test" << endl;
 }
