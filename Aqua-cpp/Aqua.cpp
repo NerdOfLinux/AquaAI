@@ -60,7 +60,7 @@ bool fexists(const char *filename) {
 int search(string searchTerm) {
   string searchyesno;
   string bash;
-  cout << "Would you like to search that on your browser?" << endl;
+  cout << "Would you like to search that on your browser?";
   getline(cin, searchyesno);
   //If user responds yes then
   if ( searchyesno == "yes" ) {
