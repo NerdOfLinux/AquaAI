@@ -10,13 +10,14 @@ int addUser(string name);
 bool fexists(const char *filename);
 int search(string searchTerm);
 int learn(string newInfo);
-//Make a string called searchTerm
+//Make a string called searchTerm, newInfo and name
 string searchTerm;
+string newInfo;
+string name;
 //Main function
   int main() {
   //int isFile; unused variable
   //Make string name
-  string name;
   string userfile;
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
@@ -25,10 +26,13 @@ string searchTerm;
   userfile=name;
    if (fexists(userfile.append(".dat").c_str())){
       cout << "Welcome, " << name << "." << endl;
-      cout << "Enter item to search: ";
+      //cout << "Enter item to search: ";
+      cout << "Enter new info: ";
       //Get search term
-      getline(cin, searchTerm);
-      search(searchTerm);
+      //getline(cin, searchTerm);
+      //search(searchTerm);
+      getline(cin, newInfo);
+      learn(newInfo);
     }
     else {
       createUser(name);
@@ -81,5 +85,10 @@ return 0;
 
 //Make function learn
 int learn(string newInfo) {
-  cout << "Test" << endl;
+  ofstream userfile;
+  //Open the userfile
+  userfile.open(name.append(".dat").c_str(), ios_base::app);
+  //Write to the file
+  userfile << newInfo << endl;
+  //Add a newline
 }
