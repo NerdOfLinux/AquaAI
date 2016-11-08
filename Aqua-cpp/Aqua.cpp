@@ -21,8 +21,10 @@ string userfile;
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
+  //Make name2 to edit, keep name as original input
+  name2=name
   //If the file exists then add a user, else make a new file with the user
-  userfile=name.append(".dat");
+   userfile=name2.append(".dat");
    if (fexists(userfile.c_str())){
    		cout << "Welcome, " << name << "." << endl;
    		//While the input is not equal to exit
@@ -90,7 +92,7 @@ return 0;
 int learn(string newInfo) {
   ofstream file;
   //Open the userfile
-  file.open(userfile.c_str());
+  file.open(userfile.c_str(), ios_base::app);
   //Write to the file
   file << newInfo << endl;
 }
