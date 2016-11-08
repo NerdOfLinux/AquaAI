@@ -72,7 +72,7 @@ int search(string searchTerm) {
   //Make string called yesno and bash
   string searchyesno;
   string bash;
-  cout << "Would you like to search that on your browser?: ";
+  cout << "Would you like to search that on your browser yes/no?: ";
   getline(cin, searchyesno);
   //If user responds yes then
   if ( searchyesno == "yes" ) {
