@@ -10,29 +10,32 @@ int addUser(string name);
 bool fexists(const char *filename);
 int search(string searchTerm);
 int learn(string newInfo);
-//Make a string called searchTerm, newInfo and name
+//Make a string called searchTerm, newInfo, command, userfile and name
 string searchTerm;
 string newInfo;
 string name;
+string command;
+string userfile;
 //Main function
   int main() {
-  //int isFile; unused variable
-  //Make string name
-  string userfile;
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
   //If the file exists then add a user, else make a new file with the user
-  userfile=name;
-   if (fexists(userfile.append(".dat").c_str())){
-      cout << "Welcome, " << name << "." << endl;
-      //cout << "Enter item to search: ";
-      cout << "Enter new info: ";
-      //Get search term
-      //getline(cin, searchTerm);
-      //search(searchTerm);
-      getline(cin, newInfo);
-      learn(newInfo);
+  userfile=name.append(".dat");
+   if (fexists(userfile.c_str())){
+   		cout << "Welcome, " << name << "." << endl;
+   		//While the input is not equal to exit
+			while ( command != "exit" ) {
+      	//cout << "Enter item to search: ";
+      	cout << "Enter new info: ";
+      	//Get search term
+      	//getline(cin, searchTerm);
+      	//search(searchTerm);
+      	//Get user input
+      	getline(cin, command);
+      	newInfo=command; 
+      	learn(newInfo); }
     }
     else {
       createUser(name);
@@ -85,10 +88,9 @@ return 0;
 
 //Make function learn
 int learn(string newInfo) {
-  ofstream userfile;
+  ofstream file;
   //Open the userfile
-  userfile.open(name.append(".dat").c_str(), ios_base::app);
+  file.open(userfile.c_str());
   //Write to the file
-  userfile << newInfo << endl;
-  //Add a newline
+  file << newInfo << endl;
 }
