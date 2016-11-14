@@ -14,6 +14,7 @@ int learn(string newInfo);
 string searchTerm;
 string newInfo;
 string name;
+string name2;
 string command;
 string userfile;
 //Main function
@@ -22,7 +23,7 @@ string userfile;
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
   //Make name2 to edit, keep name as original input
-  name2=name
+  name=name2;
   //If the file exists then add a user, else make a new file with the user
    userfile=name2.append(".dat");
    if (fexists(userfile.c_str())){
