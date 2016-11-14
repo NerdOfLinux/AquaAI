@@ -104,8 +104,13 @@ int search(string searchTerm) {
 }
 return 0;
 }
+<<<<<<< HEAD
 /*
 //Make function learn
+=======
+
+//Make function learn with string newInfo
+>>>>>>> 4d885a8416844fca609f65920733f9033f6b6b92
 int learn(string newInfo) {
 <<<<<<< HEAD
   cout << "Enter FileName to save data to: " << endl;
@@ -124,7 +129,7 @@ int learn(string newInfo) {
 >>>>>>> 018ac121b366708028196a3fa039443003b74dbc
   file.open(userfile.c_str(), ios_base::app);
   //Write to the file if newInfo is not equal to exit
-  if (newInfo != "exit") {
+  if (newInfo != "exit") { 
   file << newInfo << endl; }
 >>>>>>> 3103d83c419bf453fc091bc77c4cc80907596d46
 }
