@@ -107,6 +107,7 @@ return 0;
 /*
 //Make function learn
 int learn(string newInfo) {
+<<<<<<< HEAD
   cout << "Enter FileName to save data to: " << endl;
   getline(cin, outfile);
   fstream outfile;
@@ -117,6 +118,10 @@ int learn(string newInfo) {
   outfile << newInfo << endl;
   outfile.close();
 =======
+=======
+  ofstream file;
+  //Open the userfile to append
+>>>>>>> 018ac121b366708028196a3fa039443003b74dbc
   file.open(userfile.c_str(), ios_base::app);
   //Write to the file if newInfo is not equal to exit
   if (newInfo != "exit") {
