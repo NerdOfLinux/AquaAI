@@ -14,7 +14,6 @@ int learn(string newInfo);
 string searchTerm;
 string newInfo;
 string name;
-string name2;
 string command;
 string userfile;
 //Main function
@@ -23,7 +22,7 @@ string userfile;
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
   //Make name2 to edit, keep name as original input
-  name=name2;
+	string name2=name;
   //If the file exists then add a user, else make a new file with the user
    userfile=name2.append(".dat");
    if (fexists(userfile.c_str())){
@@ -73,7 +72,7 @@ int search(string searchTerm) {
   //Make string called yesno and bash
   string searchyesno;
   string bash;
-  cout << "Would you like to search that on your browser yes/no?: ";
+  cout << "Would you like to search that on your browser?: ";
   getline(cin, searchyesno);
   //If user responds yes then
   if ( searchyesno == "yes" ) {
@@ -94,6 +93,7 @@ int learn(string newInfo) {
   ofstream file;
   //Open the userfile
   file.open(userfile.c_str(), ios_base::app);
-  //Write to the file
-  file << newInfo << endl;
+  //Write to the file if newInfo is not equal to exit
+  if (newInfo != "exit") {
+  file << newInfo << endl; }
 }
