@@ -88,12 +88,12 @@ int search(string searchTerm) {
 return 0;
 }
 
-//Make function learn
+//Make function learn with string newInfo
 int learn(string newInfo) {
   ofstream file;
   //Open the userfile to append
   file.open(userfile.c_str(), ios_base::app);
   //Write to the file if newInfo is not equal to exit
-  if (newInfo != "exit") {
+  if (newInfo != "exit") { 
   file << newInfo << endl; }
 }
