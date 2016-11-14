@@ -91,7 +91,7 @@ return 0;
 //Make function learn
 int learn(string newInfo) {
   ofstream file;
-  //Open the userfile
+  //Open the userfile to append
   file.open(userfile.c_str(), ios_base::app);
   //Write to the file if newInfo is not equal to exit
   if (newInfo != "exit") {
