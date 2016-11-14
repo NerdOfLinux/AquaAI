@@ -10,7 +10,7 @@ int addUser(string name);
 bool fexists(const char *filename);
 int search(string searchTerm);
 int learn(string newInfo);
-//Make a string called searchTerm, newInfo, command, userfile and name
+//Make a string called searchTerm, newInfo, name, command, and userfile
 string searchTerm;
 string newInfo;
 string name;
