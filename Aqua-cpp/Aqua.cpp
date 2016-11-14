@@ -10,23 +10,34 @@ int addUser(string name);
 bool fexists(const char *filename);
 int search(string searchTerm);
 int learn(string newInfo);
+//Make a string called searchTerm, newInfo, command, userfile and name
 string searchTerm;
+string newInfo;
+string name;
+string command;
+string userfile;
 //Main function
   int main() {
-  //int isFile; unused variable
-  //Make string name
-  string name;
-  string userfile;
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
+  //Make name2 to edit, keep name as original input
+  name2=name
   //If the file exists then add a user, else make a new file with the user
-  userfile=name;
-   if (fexists(userfile.append(".dat").c_str())){
-      cout << "Welcome, " << name << "." << endl;
-      cout << "Enter item to search: ";
-      getline(cin, searchTerm);
-      search(searchTerm);
+   userfile=name2.append(".dat");
+   if (fexists(userfile.c_str())){
+   		cout << "Welcome, " << name << "." << endl;
+   		//While the input is not equal to exit
+			while ( command != "exit" ) {
+      	//cout << "Enter item to search: ";
+      	cout << "Enter new info: ";
+      	//Get search term
+      	//getline(cin, searchTerm);
+      	//search(searchTerm);
+      	//Get user input
+      	getline(cin, command);
+      	newInfo=command; 
+      	learn(newInfo); }
     }
     else {
       createUser(name);
@@ -58,6 +69,7 @@ bool fexists(const char *filename) {
 
 //Function to open browser with a custom search term
 int search(string searchTerm) {
+  //Make string called yesno and bash
   string searchyesno;
   string bash;
   cout << "Would you like to search that on your browser yes/no?: ";
@@ -76,6 +88,11 @@ int search(string searchTerm) {
 return 0;
 }
 
+//Make function learn
 int learn(string newInfo) {
-  cout << "Test" << endl;
+  ofstream file;
+  //Open the userfile
+  file.open(userfile.c_str(), ios_base::app);
+  //Write to the file
+  file << newInfo << endl;
 }
