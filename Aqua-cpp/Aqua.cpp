@@ -17,6 +17,7 @@ string name;
 string name2;
 string command;
 string userfile;
+string outfile;
 //Main function
   int main() {
   //Get name from user
@@ -27,7 +28,7 @@ string userfile;
   //If the file exists then add a user, else make a new file with the user
    userfile=name2.append(".dat");
    if (fexists(userfile.c_str())){
-   		cout << "Welcome, " << name << "." << endl;
+   		cout << "Welcome, " << name2 << "." << endl;
    		//While the input is not equal to exit
 			while ( command != "exit" ) {
       	//cout << "Enter item to search: ";
@@ -37,7 +38,7 @@ string userfile;
       	//search(searchTerm);
       	//Get user input
       	getline(cin, command);
-      	newInfo=command; 
+      	newInfo=command;
       	learn(newInfo); }
     }
     else {
@@ -46,7 +47,7 @@ string userfile;
   }
 //Funtion createUser
   int createUser(string name){
-  cout << "Creating user..." << endl;   
+  cout << "Creating user..." << endl;
   //Declare what file is
   string namefile;
   ofstream userfile;
@@ -67,6 +68,20 @@ bool fexists(const char *filename) {
   ifstream ifile(filename);
   return ifile;
 }
+//Make function learn
+int learn(string newInfo) {
+  cout << "Enter FileName to save data to: " << endl;
+  getline(cin, outfile);
+  fstream outfile;
+  //Open the userfile
+  outfile.open(outfile.c_str(), ios::out );
+  //Write to the file
+  outfile << newInfo << endl;
+  outfile.close();
+  return 0;
+ }
+
+
 
 //Function to open browser with a custom search term
 int search(string searchTerm) {
@@ -86,14 +101,20 @@ int search(string searchTerm) {
     cout << "goodbye" << endl;
     return 0;
   }
+ }
+}
 return 0;
 }
-
+/*
 //Make function learn
 int learn(string newInfo) {
-  ofstream file;
+  cout << "Enter FileName to save data to: " << endl;
+  getline(cin, outfile);
+  fstream outfile;
   //Open the userfile
-  file.open(userfile.c_str(), ios_base::app);
+  outfile.open(outfile.c_str(), ios::out );
   //Write to the file
-  file << newInfo << endl;
+  outfile << newInfo << endl;
+  outfile.close();
 }
+*/
