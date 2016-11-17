@@ -26,19 +26,17 @@ string userfile;
   //If the file exists then add a user, else make a new file with the user
    userfile=name2.append(".dat");
    if (fexists(userfile.c_str())){
-   		cout << "Welcome, " << name << ". Use exit to exit." << endl;
-   		//While the input is not equal to exit
-			while ( command != "exit" ) {
-      	//cout << "Enter item to search: ";
-      	cout << "Enter new info: ";
-      	//Get search term
-      	//getline(cin, searchTerm);
-      	//search(searchTerm);
-      	//Get user input
-      	getline(cin, command);
-      	newInfo=command; 
-      	learn(newInfo); }
-    }
+   	cout << "Welcome, " << name << ". Use exit to exit." << endl;
+   	//While the input is not equal to exit
+	while ( command != "exit" ) {
+		//Print Enter new info
+      		cout << "Enter new info: ";
+      		//Get user input
+      		getline(cin, command);
+      		newInfo=command; 
+      		//Run function learn with string newInfo
+		learn(newInfo); }
+    }	
     else {
       createUser(name);
    }
