@@ -10,6 +10,7 @@ int addUser(string name);
 bool fexists(const char *filename);
 int search(string searchTerm);
 int learn(string newInfo);
+int read(string oldInfo);
 //Make a string called searchTerm, newInfo, name, command, and userfile
 string searchTerm;
 string newInfo;
@@ -30,7 +31,7 @@ string userfile;
    	//While the input is not equal to exit
 	while ( command != "exit" ) {
 		//Print Enter new info
-      		cout << "Enter new info: ";
+      		cout << "Enter info/question: ";
       		//Get user input
       		getline(cin, command);
       		newInfo=command; 
@@ -94,4 +95,12 @@ int learn(string newInfo) {
   //Write to the file if newInfo is not equal to exit
   if (newInfo != "exit") { 
   file << newInfo << endl; }
+}
+
+int read(string oldInfo) {
+	string line;
+	ifstream readfile(userfile.c_str());
+	while (getline(readfile, line)){
+		cout << line << '\n';	
+	}
 }
