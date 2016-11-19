@@ -55,7 +55,8 @@ string userfile;
   userfile.open(namefile.append(".dat").c_str());
   //Close the file
   userfile.close();
-  cout << "User " << name << " has been created." << endl; 
+  cout << "User " << name << " has been created." << endl;
+  system("clear");
   main();
   //End
   return 0;
