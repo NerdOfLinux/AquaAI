@@ -56,7 +56,7 @@ string userfile;
   //Close the file
   userfile.close();
   cout << "User " << name << " has been created." << endl; 
-  cout << "Run this program again to log in." << endl;
+  main();
   //End
   return 0;
   }
