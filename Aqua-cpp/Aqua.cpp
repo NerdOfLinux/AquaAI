@@ -3,6 +3,8 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
+#include <algorithm>
+#include <string>
 using namespace std;
 //Declare funtions
 int createUser(string name);
@@ -24,12 +26,12 @@ int length;
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
-  while ( name.length() > length)
+	  while ( name.length() > length) //Compare name length to length
   {
-  cout << "I am sorry, but your name is too long!" << endl;	  
+  cout << "I am sorry, but your name is too long!" << endl; //Check name length and keep re-running main until name is under 10 characters	  
   main();
   }
-  
+    transform(name.begin(),name.end(),name.begin(),::tolower); //convert name to lowercase
   //Make name2 to edit, keep name as original input
 	string name2=name;
   //If the file exists then add a user, else make a new file with the user
