@@ -17,11 +17,19 @@ string newInfo;
 string name;
 string command;
 string userfile;
+int length;
 //Main function
   int main() {
+  length = 10;
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
   getline(cin, name);
+  while ( name.length() > length)
+  {
+  cout << "I am sorry, but your name is too long!" << endl;	  
+  main();
+  }
+  
   //Make name2 to edit, keep name as original input
 	string name2=name;
   //If the file exists then add a user, else make a new file with the user
@@ -34,7 +42,7 @@ string userfile;
       		cout << "Enter info/question: ";
       		//Get user input
       		getline(cin, command);
-      		newInfo=command; 
+		newInfo=command; 
       		//Run function learn with string newInfo
 		learn(newInfo); }
     }	
@@ -42,6 +50,7 @@ string userfile;
       createUser(name);
    }
   }
+}
 //Funtion createUser
   int createUser(string name){
   cout << "Creating user..." << endl;   
