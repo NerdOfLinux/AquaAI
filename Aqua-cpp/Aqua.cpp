@@ -46,13 +46,14 @@ int length=10; //Declare length and set it to ten
       		cout << "Enter info/question: ";
       		//Get user input
       		getline(cin, command);
+ 		searchTerm=command;
 		newInfo=command; 
-                const string sentence = command;
-                size_t pos;
-                search1 = "?";
-                pos = command.find(search1);
+                const string sentence = command; //Make sentence a const equal to command
+                size_t pos; //Represnets integer type
+                search1 = "?"; // Search1 is equal to ?
+                pos = command.find(search1); //Searches the string command for a question mark
                 if (pos != string::npos)
-                  search(search1);
+                  search(searchTerm); // If a question mark is in command run before else
                 else
                   
                 
@@ -93,7 +94,7 @@ int search(string searchTerm) {
   //Make string called yesno and bash
   string searchyesno;
   string bash;
-  cout << "Would you like to search that on your browser?: ";
+  cout << "Would you like to search that on your browser yes/no?: ";
   getline(cin, searchyesno);
   //If user responds yes then
   if ( searchyesno == "yes" ) {
