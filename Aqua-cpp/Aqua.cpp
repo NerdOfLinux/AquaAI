@@ -19,12 +19,11 @@ string newInfo;
 string name;
 string command;
 string userfile;
-int length;
+int length=10; //Declare length and set it to ten
 //Main function
   int main() {
-  length = 10;
   //Get name from user
-  cout << "Hello, Welcome to Aqua-AI, Enter name now: ";
+  cout << "Hello, Welcome to Aqua-AI, Enter name now(lowercase only): ";
   getline(cin, name);
 	  while ( name.length() > length) //Compare name length to length
   {
