@@ -12,6 +12,7 @@ bool fexists(const char *filename);
 int search(string searchTerm);
 int learn(string newInfo);
 int read(string oldInfo);
+int check(string checkInfo);
 //Declare strings for use in code
 string searchTerm;
 string newInfo;
@@ -129,5 +130,7 @@ int read(string oldInfo) {
 	while (getline(readfile, line)){
 		cout << line << '\n';	
 	}
-
+int check(string checkInfo) {
+	cout << "Test." << endl;	
+}
 }
