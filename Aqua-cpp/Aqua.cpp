@@ -13,12 +13,15 @@ bool fexists(const char *filename);
 int search(string searchTerm);
 int learn(string newInfo);
 int read(string oldInfo);
-//Make a string called searchTerm, newInfo, name, command, and userfile
+//Declare strings for use in code
 string searchTerm;
 string newInfo;
 string name;
 string command;
 string userfile;
+string search1;
+string que;
+
 int length=10; //Declare length and set it to ten
 //Main function
   int main() {
@@ -44,6 +47,15 @@ int length=10; //Declare length and set it to ten
       		//Get user input
       		getline(cin, command);
 		newInfo=command; 
+                const string sentence = command;
+                size_t pos;
+                search1 = "?";
+                pos = command.find(search1);
+                if (pos != string::npos)
+                  search(search1);
+                else
+                  
+                
       		//Run function learn with string newInfo
 		learn(newInfo); }
     }	
@@ -113,4 +125,5 @@ int read(string oldInfo) {
 	while (getline(readfile, line)){
 		cout << line << '\n';	
 	}
+
 }
