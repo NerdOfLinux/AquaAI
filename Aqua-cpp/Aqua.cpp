@@ -50,7 +50,6 @@ int length;
       createUser(name);
    }
   }
-}
 //Funtion createUser
   int createUser(string name){
   cout << "Creating user..." << endl;   
