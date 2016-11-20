@@ -4,7 +4,6 @@
 #include <fstream>
 #include <cstdlib>
 #include <algorithm>
-#include <string>
 using namespace std;
 //Declare funtions
 int createUser(string name);
@@ -13,7 +12,6 @@ bool fexists(const char *filename);
 int search(string searchTerm);
 int learn(string newInfo);
 int read(string oldInfo);
-int check(string checkInfo);
 //Declare strings for use in code
 string searchTerm;
 string newInfo;
@@ -53,7 +51,7 @@ int length=10; //Declare length and set it to ten
                 search1 = "?";
                 pos = command.find(search1);
                 if (pos != string::npos)
-                  search(search1);
+                  search(command);
                 else
                   
                 
@@ -127,8 +125,4 @@ int read(string oldInfo) {
 		cout << line << '\n';	
 	}
 
-}
-
-int check(string checkInfo) {
-	cout << "" << endl;	
 }
