@@ -5,23 +5,12 @@
 #include <cstdlib>
 #include <algorithm>
 using namespace std;
-//Declare funtions
-int learn(string newInfo);
+string userfile=;
+//Declare funtions;
 int read();
-int check(string checkInfo);
   int main() {
 	read();
   }
-
-//Make function learn with string newInfo
-int learn(string newInfo) {
-  ofstream file;
-  //Open the userfile to append
-  file.open(userfile.c_str(), ios_base::app);
-  //Write to the file if newInfo is not equal to exit
-  if (newInfo != "exit") { 
-  file << newInfo << endl; }
-}
 
 int read() {
 	string line;
@@ -29,7 +18,3 @@ int read() {
 	while (getline(readfile, line)){
 		cout << line << '\n';	
 	}
-int check(string checkInfo) {
-	cout << "Test." << endl;	
-}
-}
