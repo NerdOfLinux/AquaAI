@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <algorithm>
 using namespace std;
-string userfile=;
+string userfile="";
 //Declare funtions;
 int read();
   int main() {
