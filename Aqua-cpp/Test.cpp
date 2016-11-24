@@ -6,24 +6,9 @@
 #include <algorithm>
 using namespace std;
 //Declare funtions
-int createUser(string name);
-int addUser(string name);
-bool fexists(const char *filename);
-int search(string searchTerm);
 int learn(string newInfo);
-int read(string oldInfo);
+int read();
 int check(string checkInfo);
-//Declare strings for use in code
-string searchTerm;
-string newInfo;
-string name;
-string command;
-string userfile;
-string search1;
-string que;
-
-int length=10; //Declare length and set it to ten
-//Main function
   int main() {
 	read();
   }
