@@ -53,11 +53,8 @@ int length=10; //Declare length and set it to ten
                 search1 = "?"; // Search1 is equal to ?
                 pos = command.find(search1); //Searches the string command for a question mark
                 if (pos != string::npos)
-<<<<<<< HEAD
-                  search(searchTerm); // If a question mark is in command run before else
-=======
+                // If a question mark is in command run before else
                   search(command);
->>>>>>> 87c6b385cc805c63df4a7510cefb56992c4fb3e6
                 else
                   
                 
