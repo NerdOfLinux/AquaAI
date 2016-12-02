@@ -31,9 +31,9 @@ int length=10; //Declare length and set it to ten
   while ( name.length() > length){  //Compare name length to length
   	cout << "I am sorry, but your name is too long!" << endl; //Check name length and keep re-running main until name is under 10 characters	 
   }
-    transform(name.begin(),name.end(),name.begin(),::tolower); //convert name to lowercase
+  transform(name.begin(),name.end(),name.begin(),::tolower); //convert name to lowercase
   //Make name2 to edit, keep name as original input
-	string name2=name;
+  string name2=name;
   //If the file exists then add a user, else make a new file with the user
    userfile=name2.append(".dat");
    if (fexists(userfile.c_str())){
@@ -50,9 +50,9 @@ int length=10; //Declare length and set it to ten
                 size_t pos; //Represnets integer type
                 search1 = "?"; // Search1 is equal to ?
                 pos = command.find(search1); //Searches the string command for a question mark
-                if (pos != string::npos)
+                if (pos != string::npos){
                 // If a question mark is in command run before else
-                  search(command);
+                  search(command);}
                 else{ 
                 //Run function learn with string newInfo
 		learn(newInfo); }
@@ -60,7 +60,6 @@ int length=10; //Declare length and set it to ten
     else {
       createUser(name);
    }
-  }
 //Funtion createUser
   int createUser(string name){
   cout << "Creating user..." << endl;   
