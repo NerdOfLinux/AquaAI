@@ -122,7 +122,7 @@ int read(string oldInfo) {
 	while (getline(readfile, line)){
 		cout << line << '\n';	
 	}
+}
 int check(string checkInfo) {
 	cout << "Test." << endl;	
-}
 }
