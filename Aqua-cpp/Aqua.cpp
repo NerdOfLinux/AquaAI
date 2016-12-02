@@ -57,7 +57,7 @@ int length=10; //Declare length and set it to ten
                 //Run function learn with string newInfo
 		learn(newInfo); }
     }	
-    else {
+    else{
       createUser(name);
    }
 //Funtion createUser
