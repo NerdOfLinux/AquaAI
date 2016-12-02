@@ -28,10 +28,8 @@ int length=10; //Declare length and set it to ten
   //Get name from user
   cout << "Hello, Welcome to Aqua-AI, Enter name now(lowercase only): ";
   getline(cin, name);
-	  while ( name.length() > length) //Compare name length to length
-  {
-  cout << "I am sorry, but your name is too long!" << endl; //Check name length and keep re-running main until name is under 10 characters	  
-  main();
+  while ( name.length() > length){  //Compare name length to length
+  	cout << "I am sorry, but your name is too long!" << endl; //Check name length and keep re-running main until name is under 10 characters	 
   }
     transform(name.begin(),name.end(),name.begin(),::tolower); //convert name to lowercase
   //Make name2 to edit, keep name as original input
@@ -55,10 +53,8 @@ int length=10; //Declare length and set it to ten
                 if (pos != string::npos)
                 // If a question mark is in command run before else
                   search(command);
-                else
-                  
-                
-      		//Run function learn with string newInfo
+                else{ 
+                //Run function learn with string newInfo
 		learn(newInfo); }
     }	
     else {
