@@ -12,7 +12,7 @@
    cd Aqua-cpp; make  
 
 # <h2> Using Aqua on Windows: </h2>
-   If you are on Windows please install and or use a adaquate C++ compiler, then run the Aqua.cpp File. Some features may not work as they use the linux shell.
+  Please note that we the developers are no longer officially supporting windows. If you are on Windows though please install and or use a adaquate C++ compiler, then run the Aqua.cpp File. Some features may not work as they use the linux shell.
  
  
 # <h2> News: </h2> <br>
