@@ -6,7 +6,7 @@
 #include <algorithm>
 using namespace std;
 //Declare funtions
-int createUser(string name);
+//int createUser(string name);
 int addUser(string name);
 bool fexists(const char *filename);
 int search(string searchTerm);
