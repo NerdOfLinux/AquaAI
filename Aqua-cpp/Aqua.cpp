@@ -26,13 +26,13 @@ string que;
 int length=10; //Declare length and set it to ten
 //Main function
   int main() {
-  //Get name from user
-  cout << "Hello, Welcome to Aqua-AI, Enter name now(lowercase only): ";
-  getline(cin, name);
-  while ( name.length() > length){  //Compare name length to length
+  //Get name from user	  
+        cout << "Hello, Welcome to Aqua-AI, Enter name now(lowercase only): ";
+  	getline(cin, name);
+  	while ( name.length() > length){  //Compare name length to length
   	cout << "I am sorry, but your name is too long!" << endl; //Check name length and keep re-running main until name is under 10 characters	 
  }  
-  transform(name.begin(),name.end(),name.begin(),::tolower); //convert name to lowercase
+	  transform(name.begin(),name.end(),name.begin(),::tolower); //convert name to lowercase
   //Make name2 to edit, keep name as original input
   string name2=name;
   //If the file exists then add a user, else make a new file with the user
@@ -48,12 +48,13 @@ int length=10; //Declare length and set it to ten
  		searchTerm=command;
 		newInfo=command; 
                 const string sentence = command; //Make sentence a const equal to command
-                size_t pos; //Represnets character type  --|
+             
+		   size_t pos; //Represnets character type  --|
                 size_t pos1; 
-		search1 = "?"; // Search1 is equal to "?"
 		search2 = ".";// Define search 2 is equal to "."               
 		pos = command.find(search1); //Searches the string command for a question mark
                 pos1 = command.find(search2);
+		
 		if (pos != string::npos){
                 // If a question mark is in command run before else
                   search(command);
