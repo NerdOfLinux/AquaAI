@@ -49,9 +49,10 @@ int length=10; //Declare length and set it to ten
 		newInfo=command; 
                 const string sentence = command; //Make sentence a const equal to command
              
-		   size_t pos; //Represnets character type  --|
+		size_t pos; //Represnets character type  --|
                 size_t pos1; 
-		search2 = ".";// Define search 2 is equal to "."               
+		search1 = "?"; //Define search1 is equal to "?"
+		search2 = ".";// Define search2 is equal to "."               
 		pos = command.find(search1); //Searches the string command for a question mark
                 pos1 = command.find(search2);
 		
@@ -71,7 +72,6 @@ int length=10; //Declare length and set it to ten
   //Declare what file is
   string namefile;
   ofstream userfile;
-  //Make a file
   cout << "Creating user files..." << endl;
   //Define namefile
   namefile=name;
