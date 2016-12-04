@@ -41,6 +41,14 @@ int length=10; //Declare length and set it to ten
    	cout << "Welcome, " << name << ". Use exit to exit." << endl;
    	//While the input is not equal to exit
 	while ( command != "exit" ) {
+		//If command is delete
+		if ( command == "delete" ) {
+			cout << "Are you sure you would like to delete your account, " << name << ", y)es or n)o?: ";
+			getiline(cin, yesno);
+			if ( yesno == "y" ) {
+				remove(userfile)	
+			}
+		}
 		//Print Enter new info
       		cout << "Enter info/question: ";
       		//Get user input
