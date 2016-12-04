@@ -4,7 +4,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <algorithm>
-#include <cstdio>
+#include <stdio.h>
 using namespace std;
 //Declare funtions
 //int createUser(string name);
@@ -46,7 +46,7 @@ int length=10; //Declare length and set it to ten
 		//If command is delete
 		if ( command == "delete" ) {
 			cout << "Are you sure you would like to delete your account, " << name << ", y)es or n)o?: ";
-			getiline(cin, yesno);
+			getline(cin, yesno);
 			if ( yesno == "y" ) {
 				remove(userfile)	
 			}
