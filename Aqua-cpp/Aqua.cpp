@@ -4,6 +4,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <algorithm>
+#include <cstdio>
 using namespace std;
 //Declare funtions
 //int createUser(string name);
@@ -22,6 +23,7 @@ string userfile;
 string search1;
 string search2;
 string que;
+string yesno;
 
 int length=10; //Declare length and set it to ten
 //Main function
