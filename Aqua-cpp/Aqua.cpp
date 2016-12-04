@@ -48,7 +48,7 @@ int length=10; //Declare length and set it to ten
 			cout << "Are you sure you would like to delete your account, " << name << ", y)es or n)o?: ";
 			getline(cin, yesno);
 			if ( yesno == "y" ) {
-				remove(userfile)	
+				remove(userfile.c_str())	
 			}
 		}
 		//Print Enter new info
