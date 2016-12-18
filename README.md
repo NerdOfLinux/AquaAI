@@ -1,7 +1,7 @@
 [![GitHub license](https://img.shields.io/codeship/d6c1ddd0-16a3-0132-5f85-2e35c05e22b1.svg)]
 
 # <h1> Aqua - The open-source semi Desktop assistant </h1>
-   Visit our site here! [a link] (https://nerdoflinux.github.io/index.html)
+   Visit our site here! [Aqua site] (https://nerdoflinux.github.io/index.html)
    Aqua is currently in Alpha stages and is still yet being developed.
    Aqua is currently only tested in Ubuntu and Mac OS, but should work with most debian based operating systems.
    Note: Aqua is not a true assistant yet.
