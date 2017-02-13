@@ -21,3 +21,5 @@
 
 # <h2> Notes: </h2> <br>
    If you are still planning on using the Python version of Aqua (stable) please use Aqua3.py for Python3 and Aqua.py for Python2.7.12.
+
+#We currently do not have time to actively add features to Aqua. Please contact us if you would like to help.
