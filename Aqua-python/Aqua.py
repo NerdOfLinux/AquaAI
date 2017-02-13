@@ -65,6 +65,7 @@ if filecheck == 1:
 			#If command is help explain how to use AI
 			elif command == "help":
 				print("To tell me about yourself, say a fact about yourself followed by a period. To ask a queston, put a question mark at the end of it.")
+			#If the command is list, then explain what to do
 			elif command == "list":
 				print("A few example of things you can ask me are: my favorite color, when I was born, and my favorite color.")
 			
@@ -159,7 +160,7 @@ else:
 	print("No spaces or special characters allowed.")
 	#Ask for the username
 	username=raw_input("What is your name(all lowercase)?: ")
-	#Save the username in lowercase
+	#Save the username in lowercase to be safe
 	username=username.lower()
 	#Write the username to a file
 	with open('users.dat', 'w') as file:
