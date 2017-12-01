@@ -21,4 +21,4 @@ cd Aqua-cpp; make
    3/1/2017 --> Python is once again being developed on and built!
    11/8/2017 --> Production is halted due to other coding interests. The current build should still functions properly though
 
-#We currently do not have time to actively add features to Aqua. By all means Fork us and create new pull requests.
+# We currently do not have time to actively add features to Aqua. By all means Fork us and create new pull requests.
