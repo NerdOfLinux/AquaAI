@@ -7,10 +7,12 @@
 
 
 # <h2> Using Aqua on Linux: </h2> 
-   mkdir Aqua ; cd Aqua
-   git clone https://github.com/NerdOfLinux/AquaAI.git 
-   cd Aqua-cpp; make  
 
+```shell
+mkdir Aqua ; cd Aqua
+git clone https://github.com/NerdOfLinux/AquaAI.git 
+cd Aqua-cpp; make  
+```
 # <h2> Using Aqua on Windows: </h2>
   Please note that we the developers are no longer officially supporting windows. If you are on Windows though please install and or use a adaquate C++ compiler, then run the Aqua.cpp File. Some features may not work as they require and take advantage of the linux shell.
  
